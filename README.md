@@ -1,3 +1,12 @@
+## 🚀 Live Dashboard
+
+**Explore the interactive VELOOP Rewards Analytics Dashboard:**
+
+[Open Live Dashboard](https://veloop-rewards-analytics-blueprint-uzuo4gyrzccnznudiuekqs.streamlit.app/)
+
+**Platform:** Streamlit Community Cloud
+
+---
 # VELOOP Rewards — Product Analytics, Data Readiness & Data Management Blueprint
 ### End-to-End Enterprise Deliverable & Interactive Analytics Platform
 **Author / Lead Data Analyst:** Pushti Kotak  
