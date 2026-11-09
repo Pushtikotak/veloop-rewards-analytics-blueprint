@@ -1,0 +1,551 @@
+issue_record_id,user_id,timestamp,transaction_type,amount,status,payout_method,injected_defect_type
+err_DUPLICATE_001,usr_b540095e-4b4a-40f6-8cfc-147de71f3b1c,2026-10-15 12:30:00,REWARD_CREDIT,150.0,Completed,PayPal,duplicate_id
+,usr_a24b49f1-9565-4429-a5bc-676837f7bdec,2026-10-15 12:30:00,REWARD_CREDIT,150.0,Completed,PayPal,missing_id
+err_0003,usr_49b6512d-baba-4923-926e-e882059303d5,,REWARD_CREDIT,150.0,Completed,PayPal,missing_timestamp
+err_0004,usr_a90f439c-2996-4d45-9d76-d60452da8f71,15/10/2026 25:99:00,REWARD_CREDIT,150.0,Completed,PayPal,malformed_date
+err_0005,usr_8cf292a9-debb-44ca-9ff3-3a0ac557bc4b,2026-10-15 12:30:00,REWARD_CREDIT,150.0,UNKNOWN_GLITCH,PayPal,invalid_status
+err_0006,usr_c83602ea-2867-42b9-b12c-4f764bae8eaa,2026-10-15 12:30:00,REWARD_CREDIT,150.0,cOmPLeTeD,PayPal,inconsistent_capitalization
+err_0007,usr_86841c88-4891-42f9-8584-e7f96cc4554d,2026-10-15 12:30:00,  REWARD_CREDIT ,150.0,Completed   ,PayPal,trailing_spaces
+err_0008,usr_b5280983-cda2-41b1-8e3b-9bdfee28f525,2026-10-15 12:30:00,REWARD_CREDIT,ONE_HUNDRED,Completed,PayPal,invalid_numeric_value
+err_0009,usr_bb4b9dc0-9cc1-46a8-8f00-394eb177bfca,2026-10-15 12:30:00,REWARD_CREDIT,-500.0,Completed,PayPal,negative_value_inappropriate
+err_0010,,2026-10-15 12:30:00,REWARD_CREDIT,150.0,Completed,PayPal,unexpected_null
+err_0011,usr_NON_EXISTENT_GHOST_9999,2026-10-15 12:30:00,REWARD_CREDIT,150.0,Completed,PayPal,orphan_record
+err_DUPE_EVENT_777,usr_eb21f814-b8fb-450b-a413-239bb221018b,2026-10-15 12:30:00,REWARD_CREDIT,150.0,Completed,PayPal,duplicate_event
+err_0013,usr_25ef87d6-4637-471c-aafc-8bc7f171592a,2026-10-15 12:30:00,reward-payout-bonus,150.0,Completed,PayPal,inconsistent_naming
+err_0014,usr_223a829f-941e-4fc3-a884-b5eb9862f6b3,2026-10-15 12:30:00,REWARD_CREDIT,150.0,Requested_Then_Instantly_Refunded_Without_Processing,PayPal,impossible_state_transition
+err_DUPLICATE_001,usr_93027a9e-7c08-474f-a931-3381e1d29977,2026-10-15 12:30:00,REWARD_CREDIT,150.0,Completed,PayPal,duplicate_id
+,usr_2d6142d7-d4a4-4374-9067-d1598e8dd6a4,2026-10-15 12:30:00,REWARD_CREDIT,150.0,Completed,PayPal,missing_id
+err_0017,usr_3c440235-df2f-44f4-884b-c6199d5f093e,,REWARD_CREDIT,150.0,Completed,PayPal,missing_timestamp
+err_0018,usr_ff925935-d651-4e2c-a8f3-eb6a86f31a3c,15/10/2026 25:99:00,REWARD_CREDIT,150.0,Completed,PayPal,malformed_date
+err_0019,usr_aff0f7ba-f2c6-4ff0-86c6-32e336e4abe7,2026-10-15 12:30:00,REWARD_CREDIT,150.0,UNKNOWN_GLITCH,PayPal,invalid_status
+err_0020,usr_eb479a9b-60ea-4cdd-ad38-3cb3704b8192,2026-10-15 12:30:00,REWARD_CREDIT,150.0,cOmPLeTeD,PayPal,inconsistent_capitalization
+err_0021,usr_70160cf6-eebe-4cee-b2c8-02ea7499106e,2026-10-15 12:30:00,  REWARD_CREDIT ,150.0,Completed   ,PayPal,trailing_spaces
+err_0022,usr_4628c4a9-b94f-4efd-bd68-b5af4ab1028e,2026-10-15 12:30:00,REWARD_CREDIT,ONE_HUNDRED,Completed,PayPal,invalid_numeric_value
+err_0023,usr_45c3a32b-0f25-46b6-84c4-b077e22310c2,2026-10-15 12:30:00,REWARD_CREDIT,-500.0,Completed,PayPal,negative_value_inappropriate
+err_0024,,2026-10-15 12:30:00,REWARD_CREDIT,150.0,Completed,PayPal,unexpected_null
+err_0025,usr_NON_EXISTENT_GHOST_9999,2026-10-15 12:30:00,REWARD_CREDIT,150.0,Completed,PayPal,orphan_record
+err_DUPE_EVENT_777,usr_b0fe0b40-6c9a-46b4-92b5-4fbf1856ee27,2026-10-15 12:30:00,REWARD_CREDIT,150.0,Completed,PayPal,duplicate_event
+err_0027,usr_766064d9-169b-46dd-b339-bde7b9dcb99f,2026-10-15 12:30:00,reward-payout-bonus,150.0,Completed,PayPal,inconsistent_naming
+err_0028,usr_8a718929-79dd-467f-a3a8-d0961bcd1ff1,2026-10-15 12:30:00,REWARD_CREDIT,150.0,Requested_Then_Instantly_Refunded_Without_Processing,PayPal,impossible_state_transition
+err_DUPLICATE_001,usr_55108ed7-7105-44a1-8559-deba22584a60,2026-10-15 12:30:00,REWARD_CREDIT,150.0,Completed,PayPal,duplicate_id
+,usr_0ada4b76-4cd3-40b9-81e1-29911f5b7484,2026-10-15 12:30:00,REWARD_CREDIT,150.0,Completed,PayPal,missing_id
+err_0031,usr_be5031cc-470b-44c8-a097-098683c0ca00,,REWARD_CREDIT,150.0,Completed,PayPal,missing_timestamp
+err_0032,usr_bfdaeac8-8028-4ecf-a908-d1a14d8d15fe,15/10/2026 25:99:00,REWARD_CREDIT,150.0,Completed,PayPal,malformed_date
+err_0033,usr_b6033229-336a-47ba-b6ee-da9ad3907e58,2026-10-15 12:30:00,REWARD_CREDIT,150.0,UNKNOWN_GLITCH,PayPal,invalid_status
+err_0034,usr_d90a25ca-11c8-44fe-b0c0-6e0a13ce7cdd,2026-10-15 12:30:00,REWARD_CREDIT,150.0,cOmPLeTeD,PayPal,inconsistent_capitalization
+err_0035,usr_0c439d3e-1fbc-405f-ab29-2b8380662542,2026-10-15 12:30:00,  REWARD_CREDIT ,150.0,Completed   ,PayPal,trailing_spaces
+err_0036,usr_b5c5e007-6f00-4c24-a788-3cf03ba54e12,2026-10-15 12:30:00,REWARD_CREDIT,ONE_HUNDRED,Completed,PayPal,invalid_numeric_value
+err_0037,usr_fdfb18f3-d6c0-40fd-bca0-b32a5f44ff44,2026-10-15 12:30:00,REWARD_CREDIT,-500.0,Completed,PayPal,negative_value_inappropriate
+err_0038,,2026-10-15 12:30:00,REWARD_CREDIT,150.0,Completed,PayPal,unexpected_null
+err_0039,usr_NON_EXISTENT_GHOST_9999,2026-10-15 12:30:00,REWARD_CREDIT,150.0,Completed,PayPal,orphan_record
+err_DUPE_EVENT_777,usr_266037c6-89dc-4b31-80e4-49de7473ef59,2026-10-15 12:30:00,REWARD_CREDIT,150.0,Completed,PayPal,duplicate_event
+err_0041,usr_b987d1a7-98e2-4ac4-8fdb-579a0b0115c2,2026-10-15 12:30:00,reward-payout-bonus,150.0,Completed,PayPal,inconsistent_naming
+err_0042,usr_a427edfd-5e0c-49b0-a293-5ea0ab25c41f,2026-10-15 12:30:00,REWARD_CREDIT,150.0,Requested_Then_Instantly_Refunded_Without_Processing,PayPal,impossible_state_transition
+err_DUPLICATE_001,usr_18b8a177-7588-4963-a941-6b13d45d489e,2026-10-15 12:30:00,REWARD_CREDIT,150.0,Completed,PayPal,duplicate_id
+,usr_70768b57-7840-47b4-bd20-0477454afcc8,2026-10-15 12:30:00,REWARD_CREDIT,150.0,Completed,PayPal,missing_id
+err_0045,usr_8baaf4b6-7516-401b-bb81-3b2667529221,,REWARD_CREDIT,150.0,Completed,PayPal,missing_timestamp
+err_0046,usr_953eb0fe-3efe-429a-8740-5de79502c74a,15/10/2026 25:99:00,REWARD_CREDIT,150.0,Completed,PayPal,malformed_date
+err_0047,usr_1daa5fb7-d1af-446f-89c8-a001c4de48bf,2026-10-15 12:30:00,REWARD_CREDIT,150.0,UNKNOWN_GLITCH,PayPal,invalid_status
+err_0048,usr_9a1c262c-d9e3-4127-8a5f-b041571e67ff,2026-10-15 12:30:00,REWARD_CREDIT,150.0,cOmPLeTeD,PayPal,inconsistent_capitalization
+err_0049,usr_4cbeff6c-350b-47c6-a3e7-449897f67870,2026-10-15 12:30:00,  REWARD_CREDIT ,150.0,Completed   ,PayPal,trailing_spaces
+err_0050,usr_b4d2ce11-068b-4a12-9264-4af265f25292,2026-10-15 12:30:00,REWARD_CREDIT,ONE_HUNDRED,Completed,PayPal,invalid_numeric_value
+err_0051,usr_ba527180-df1a-46d2-a8ca-0898dbe69ef9,2026-10-15 12:30:00,REWARD_CREDIT,-500.0,Completed,PayPal,negative_value_inappropriate
+err_0052,,2026-10-15 12:30:00,REWARD_CREDIT,150.0,Completed,PayPal,unexpected_null
+err_0053,usr_NON_EXISTENT_GHOST_9999,2026-10-15 12:30:00,REWARD_CREDIT,150.0,Completed,PayPal,orphan_record
+err_DUPE_EVENT_777,usr_4e1915c8-8f95-4644-9453-a2e4f31d67aa,2026-10-15 12:30:00,REWARD_CREDIT,150.0,Completed,PayPal,duplicate_event
+err_0055,usr_08d381e1-9bc5-4aa1-af62-7eef9824f0b9,2026-10-15 12:30:00,reward-payout-bonus,150.0,Completed,PayPal,inconsistent_naming
+err_0056,usr_38eda1cd-4220-4846-ad06-4891ec437de7,2026-10-15 12:30:00,REWARD_CREDIT,150.0,Requested_Then_Instantly_Refunded_Without_Processing,PayPal,impossible_state_transition
+err_DUPLICATE_001,usr_5307ffa2-ca2e-4f65-8547-828fb54459f4,2026-10-15 12:30:00,REWARD_CREDIT,150.0,Completed,PayPal,duplicate_id
+,usr_ad0b4862-7629-4326-9cce-1bd41d5b7aa2,2026-10-15 12:30:00,REWARD_CREDIT,150.0,Completed,PayPal,missing_id
+err_0059,usr_8d67c526-7687-4f99-b001-90d67578d316,,REWARD_CREDIT,150.0,Completed,PayPal,missing_timestamp
+err_0060,usr_ada547c1-518a-4191-b9b1-2feb19f1a165,15/10/2026 25:99:00,REWARD_CREDIT,150.0,Completed,PayPal,malformed_date
+err_0061,usr_c4c22a04-c9a5-4094-b3fa-ae433cfdae84,2026-10-15 12:30:00,REWARD_CREDIT,150.0,UNKNOWN_GLITCH,PayPal,invalid_status
+err_0062,usr_3a4bde73-ee19-40a2-b678-60333681c9cd,2026-10-15 12:30:00,REWARD_CREDIT,150.0,cOmPLeTeD,PayPal,inconsistent_capitalization
+err_0063,usr_c7c72db2-26f3-4e84-abbe-3f4632f39c8c,2026-10-15 12:30:00,  REWARD_CREDIT ,150.0,Completed   ,PayPal,trailing_spaces
+err_0064,usr_4123c499-cbf5-49aa-a241-5fb8400a282d,2026-10-15 12:30:00,REWARD_CREDIT,ONE_HUNDRED,Completed,PayPal,invalid_numeric_value
+err_0065,usr_7a5a3df8-ad65-4662-bfb1-2cd48194272f,2026-10-15 12:30:00,REWARD_CREDIT,-500.0,Completed,PayPal,negative_value_inappropriate
+err_0066,,2026-10-15 12:30:00,REWARD_CREDIT,150.0,Completed,PayPal,unexpected_null
+err_0067,usr_NON_EXISTENT_GHOST_9999,2026-10-15 12:30:00,REWARD_CREDIT,150.0,Completed,PayPal,orphan_record
+err_DUPE_EVENT_777,usr_b9d27a42-d7cd-4084-b836-989b1f2ab432,2026-10-15 12:30:00,REWARD_CREDIT,150.0,Completed,PayPal,duplicate_event
+err_0069,usr_01abb851-b899-4812-9ac0-d67a93040a08,2026-10-15 12:30:00,reward-payout-bonus,150.0,Completed,PayPal,inconsistent_naming
+err_0070,usr_2bd19e69-36be-4964-be7e-00aebbe5c197,2026-10-15 12:30:00,REWARD_CREDIT,150.0,Requested_Then_Instantly_Refunded_Without_Processing,PayPal,impossible_state_transition
+err_DUPLICATE_001,usr_8b12a48c-e270-4f46-9e63-4da227d865c0,2026-10-15 12:30:00,REWARD_CREDIT,150.0,Completed,PayPal,duplicate_id
+,usr_6bca36d2-70b7-4bda-9883-99a016e016fd,2026-10-15 12:30:00,REWARD_CREDIT,150.0,Completed,PayPal,missing_id
+err_0073,usr_27686934-59f1-40e1-b7ca-f11a407253e9,,REWARD_CREDIT,150.0,Completed,PayPal,missing_timestamp
+err_0074,usr_b4bdd17d-5537-4301-8e93-b64b382907b4,15/10/2026 25:99:00,REWARD_CREDIT,150.0,Completed,PayPal,malformed_date
+err_0075,usr_e0e386dc-b682-4a98-a8f4-42acf9e3989d,2026-10-15 12:30:00,REWARD_CREDIT,150.0,UNKNOWN_GLITCH,PayPal,invalid_status
+err_0076,usr_b1422297-d925-4dff-9dfa-8c34c603ecfd,2026-10-15 12:30:00,REWARD_CREDIT,150.0,cOmPLeTeD,PayPal,inconsistent_capitalization
+err_0077,usr_c1516188-dda8-4f9a-9a7a-b976bd166a54,2026-10-15 12:30:00,  REWARD_CREDIT ,150.0,Completed   ,PayPal,trailing_spaces
+err_0078,usr_4d59596d-d07f-45d3-80cb-03561429eecf,2026-10-15 12:30:00,REWARD_CREDIT,ONE_HUNDRED,Completed,PayPal,invalid_numeric_value
+err_0079,usr_454c473f-9c76-4cb9-bd8f-a6948db28903,2026-10-15 12:30:00,REWARD_CREDIT,-500.0,Completed,PayPal,negative_value_inappropriate
+err_0080,,2026-10-15 12:30:00,REWARD_CREDIT,150.0,Completed,PayPal,unexpected_null
+err_0081,usr_NON_EXISTENT_GHOST_9999,2026-10-15 12:30:00,REWARD_CREDIT,150.0,Completed,PayPal,orphan_record
+err_DUPE_EVENT_777,usr_b589bb8e-008d-456c-9cee-2ee168dafb86,2026-10-15 12:30:00,REWARD_CREDIT,150.0,Completed,PayPal,duplicate_event
+err_0083,usr_be32cff2-fc2e-4c00-8131-b8d99bd397a0,2026-10-15 12:30:00,reward-payout-bonus,150.0,Completed,PayPal,inconsistent_naming
+err_0084,usr_b8f1c4a0-4e8c-4ce1-8999-ebc12642d297,2026-10-15 12:30:00,REWARD_CREDIT,150.0,Requested_Then_Instantly_Refunded_Without_Processing,PayPal,impossible_state_transition
+err_DUPLICATE_001,usr_0034d355-a2b9-415e-8657-74c57225bdf6,2026-10-15 12:30:00,REWARD_CREDIT,150.0,Completed,PayPal,duplicate_id
+,usr_116ffccd-0c94-4ec4-bd4d-2bfb8f4072a4,2026-10-15 12:30:00,REWARD_CREDIT,150.0,Completed,PayPal,missing_id
+err_0087,usr_2533b6b3-3add-42be-a595-c80fbd3ed3b0,,REWARD_CREDIT,150.0,Completed,PayPal,missing_timestamp
+err_0088,usr_0f3641ec-dffa-4625-927c-e51c9b25463e,15/10/2026 25:99:00,REWARD_CREDIT,150.0,Completed,PayPal,malformed_date
+err_0089,usr_ed6eb8e6-6ad7-44ec-839f-4d3ef79db43a,2026-10-15 12:30:00,REWARD_CREDIT,150.0,UNKNOWN_GLITCH,PayPal,invalid_status
+err_0090,usr_a33271b1-9331-43ec-9fcb-f6c7cfe38819,2026-10-15 12:30:00,REWARD_CREDIT,150.0,cOmPLeTeD,PayPal,inconsistent_capitalization
+err_0091,usr_2be6fa90-0477-4800-b881-6a73ea37714b,2026-10-15 12:30:00,  REWARD_CREDIT ,150.0,Completed   ,PayPal,trailing_spaces
+err_0092,usr_0b629ee0-2a96-4515-a236-65bf7005024f,2026-10-15 12:30:00,REWARD_CREDIT,ONE_HUNDRED,Completed,PayPal,invalid_numeric_value
+err_0093,usr_a4f28255-3fd8-4495-9f1a-6e407d0bcd51,2026-10-15 12:30:00,REWARD_CREDIT,-500.0,Completed,PayPal,negative_value_inappropriate
+err_0094,,2026-10-15 12:30:00,REWARD_CREDIT,150.0,Completed,PayPal,unexpected_null
+err_0095,usr_NON_EXISTENT_GHOST_9999,2026-10-15 12:30:00,REWARD_CREDIT,150.0,Completed,PayPal,orphan_record
+err_DUPE_EVENT_777,usr_068f23e4-81b0-4d19-8d63-3bb16649f970,2026-10-15 12:30:00,REWARD_CREDIT,150.0,Completed,PayPal,duplicate_event
+err_0097,usr_034ab3a0-3b67-4d60-9d26-bdd710e6e449,2026-10-15 12:30:00,reward-payout-bonus,150.0,Completed,PayPal,inconsistent_naming
+err_0098,usr_3f4704d9-2652-4320-92c6-69dc3bb6aa30,2026-10-15 12:30:00,REWARD_CREDIT,150.0,Requested_Then_Instantly_Refunded_Without_Processing,PayPal,impossible_state_transition
+err_DUPLICATE_001,usr_52979736-a7d9-4397-9348-725af6fc0d01,2026-10-15 12:30:00,REWARD_CREDIT,150.0,Completed,PayPal,duplicate_id
+,usr_df35585e-8d9d-48d0-a2f9-358d65fd96d5,2026-10-15 12:30:00,REWARD_CREDIT,150.0,Completed,PayPal,missing_id
+err_0101,usr_df8e1021-a159-4b77-900f-db9924048f84,,REWARD_CREDIT,150.0,Completed,PayPal,missing_timestamp
+err_0102,usr_c1402586-2130-4acb-a430-1c36e4631636,15/10/2026 25:99:00,REWARD_CREDIT,150.0,Completed,PayPal,malformed_date
+err_0103,usr_6ee31d3b-15fa-4e25-a75d-ea4088c988e6,2026-10-15 12:30:00,REWARD_CREDIT,150.0,UNKNOWN_GLITCH,PayPal,invalid_status
+err_0104,usr_855492b4-8ac7-4c6d-aee3-1378870c64f6,2026-10-15 12:30:00,REWARD_CREDIT,150.0,cOmPLeTeD,PayPal,inconsistent_capitalization
+err_0105,usr_c5d37e2c-c702-4a36-b79f-e27a1c235f58,2026-10-15 12:30:00,  REWARD_CREDIT ,150.0,Completed   ,PayPal,trailing_spaces
+err_0106,usr_54a99457-1bdc-4434-881b-d72efb9c839d,2026-10-15 12:30:00,REWARD_CREDIT,ONE_HUNDRED,Completed,PayPal,invalid_numeric_value
+err_0107,usr_c3428d26-a011-4db1-873e-92964f81a62f,2026-10-15 12:30:00,REWARD_CREDIT,-500.0,Completed,PayPal,negative_value_inappropriate
+err_0108,,2026-10-15 12:30:00,REWARD_CREDIT,150.0,Completed,PayPal,unexpected_null
+err_0109,usr_NON_EXISTENT_GHOST_9999,2026-10-15 12:30:00,REWARD_CREDIT,150.0,Completed,PayPal,orphan_record
+err_DUPE_EVENT_777,usr_3c5c0713-f3d4-4def-bf64-be2724585c9b,2026-10-15 12:30:00,REWARD_CREDIT,150.0,Completed,PayPal,duplicate_event
+err_0111,usr_290b717a-1bb7-427c-ad94-c472b8c053ea,2026-10-15 12:30:00,reward-payout-bonus,150.0,Completed,PayPal,inconsistent_naming
+err_0112,usr_b75f7840-3b38-40d9-a746-b5764c28363e,2026-10-15 12:30:00,REWARD_CREDIT,150.0,Requested_Then_Instantly_Refunded_Without_Processing,PayPal,impossible_state_transition
+err_DUPLICATE_001,usr_41ee7d55-fe14-4397-98b8-a24892237685,2026-10-15 12:30:00,REWARD_CREDIT,150.0,Completed,PayPal,duplicate_id
+,usr_ba0b54bc-0fd1-459b-9f30-567ec3cf45b7,2026-10-15 12:30:00,REWARD_CREDIT,150.0,Completed,PayPal,missing_id
+err_0115,usr_40a6acad-ff60-492a-9e17-401a8a5e840f,,REWARD_CREDIT,150.0,Completed,PayPal,missing_timestamp
+err_0116,usr_66cb91e1-6f2d-41b3-84ca-66c8d068d79b,15/10/2026 25:99:00,REWARD_CREDIT,150.0,Completed,PayPal,malformed_date
+err_0117,usr_2e832569-51bc-4e2d-b747-af897afd2ae2,2026-10-15 12:30:00,REWARD_CREDIT,150.0,UNKNOWN_GLITCH,PayPal,invalid_status
+err_0118,usr_b01153d4-0026-4f50-ab11-f315069b9bda,2026-10-15 12:30:00,REWARD_CREDIT,150.0,cOmPLeTeD,PayPal,inconsistent_capitalization
+err_0119,usr_5c534fb6-3817-43aa-9461-da3422c6f3b7,2026-10-15 12:30:00,  REWARD_CREDIT ,150.0,Completed   ,PayPal,trailing_spaces
+err_0120,usr_042fbf87-612c-4c8a-9079-fc1bbb8be209,2026-10-15 12:30:00,REWARD_CREDIT,ONE_HUNDRED,Completed,PayPal,invalid_numeric_value
+err_0121,usr_36fbbbc6-12dc-43db-b342-a59c174d982d,2026-10-15 12:30:00,REWARD_CREDIT,-500.0,Completed,PayPal,negative_value_inappropriate
+err_0122,,2026-10-15 12:30:00,REWARD_CREDIT,150.0,Completed,PayPal,unexpected_null
+err_0123,usr_NON_EXISTENT_GHOST_9999,2026-10-15 12:30:00,REWARD_CREDIT,150.0,Completed,PayPal,orphan_record
+err_DUPE_EVENT_777,usr_b9be8b88-379c-4446-9043-2663a4264042,2026-10-15 12:30:00,REWARD_CREDIT,150.0,Completed,PayPal,duplicate_event
+err_0125,usr_2a15dbc4-36b2-441a-bd02-0b8b74eae79f,2026-10-15 12:30:00,reward-payout-bonus,150.0,Completed,PayPal,inconsistent_naming
+err_0126,usr_dd12fa23-8728-4137-8e69-6d122e04d901,2026-10-15 12:30:00,REWARD_CREDIT,150.0,Requested_Then_Instantly_Refunded_Without_Processing,PayPal,impossible_state_transition
+err_DUPLICATE_001,usr_bc6d2683-2803-49f7-a621-975fcf603a8b,2026-10-15 12:30:00,REWARD_CREDIT,150.0,Completed,PayPal,duplicate_id
+,usr_b297b035-2b61-47a5-8840-b98bbfc23c80,2026-10-15 12:30:00,REWARD_CREDIT,150.0,Completed,PayPal,missing_id
+err_0129,usr_53bff157-7dd6-40a0-b7c7-5178b27a72df,,REWARD_CREDIT,150.0,Completed,PayPal,missing_timestamp
+err_0130,usr_951f06fb-ccb8-465d-8e61-408b3a658440,15/10/2026 25:99:00,REWARD_CREDIT,150.0,Completed,PayPal,malformed_date
+err_0131,usr_253750e9-a333-4de0-944a-a3de2f9afd34,2026-10-15 12:30:00,REWARD_CREDIT,150.0,UNKNOWN_GLITCH,PayPal,invalid_status
+err_0132,usr_6014a4e5-c4c9-4927-a1c2-094819dd024c,2026-10-15 12:30:00,REWARD_CREDIT,150.0,cOmPLeTeD,PayPal,inconsistent_capitalization
+err_0133,usr_2a040d35-9025-4b61-b2f8-adc88da8bfc1,2026-10-15 12:30:00,  REWARD_CREDIT ,150.0,Completed   ,PayPal,trailing_spaces
+err_0134,usr_fb0662aa-8e9a-4cea-9026-074ec64facbc,2026-10-15 12:30:00,REWARD_CREDIT,ONE_HUNDRED,Completed,PayPal,invalid_numeric_value
+err_0135,usr_6b0005f5-d16b-48ef-bca9-07b2f4776063,2026-10-15 12:30:00,REWARD_CREDIT,-500.0,Completed,PayPal,negative_value_inappropriate
+err_0136,,2026-10-15 12:30:00,REWARD_CREDIT,150.0,Completed,PayPal,unexpected_null
+err_0137,usr_NON_EXISTENT_GHOST_9999,2026-10-15 12:30:00,REWARD_CREDIT,150.0,Completed,PayPal,orphan_record
+err_DUPE_EVENT_777,usr_351ccd6b-13e0-4bc7-98d1-0db6bcadcd07,2026-10-15 12:30:00,REWARD_CREDIT,150.0,Completed,PayPal,duplicate_event
+err_0139,usr_5e82a976-060c-4c68-a9dc-706cd54dcb13,2026-10-15 12:30:00,reward-payout-bonus,150.0,Completed,PayPal,inconsistent_naming
+err_0140,usr_8b91ed14-5a1e-4a15-a61d-b687afb05587,2026-10-15 12:30:00,REWARD_CREDIT,150.0,Requested_Then_Instantly_Refunded_Without_Processing,PayPal,impossible_state_transition
+err_DUPLICATE_001,usr_8ca879ea-c9aa-4ede-af36-24a40609d81e,2026-10-15 12:30:00,REWARD_CREDIT,150.0,Completed,PayPal,duplicate_id
+,usr_dac63d65-d8dc-448f-8d6a-3207b742d6d5,2026-10-15 12:30:00,REWARD_CREDIT,150.0,Completed,PayPal,missing_id
+err_0143,usr_ad410f92-c90b-4d35-b7fc-5d4d80bd0d85,,REWARD_CREDIT,150.0,Completed,PayPal,missing_timestamp
+err_0144,usr_3952396b-599b-482f-9dd0-5fe2ad1af675,15/10/2026 25:99:00,REWARD_CREDIT,150.0,Completed,PayPal,malformed_date
+err_0145,usr_0126fb5e-e74d-4b77-89da-6036ac902893,2026-10-15 12:30:00,REWARD_CREDIT,150.0,UNKNOWN_GLITCH,PayPal,invalid_status
+err_0146,usr_f5442590-34aa-4d54-bd68-ce20384396ca,2026-10-15 12:30:00,REWARD_CREDIT,150.0,cOmPLeTeD,PayPal,inconsistent_capitalization
+err_0147,usr_804b8247-7961-4dc3-87ae-8fcf52b11a0e,2026-10-15 12:30:00,  REWARD_CREDIT ,150.0,Completed   ,PayPal,trailing_spaces
+err_0148,usr_c6ee8318-ebfb-4728-aa31-53a0933967da,2026-10-15 12:30:00,REWARD_CREDIT,ONE_HUNDRED,Completed,PayPal,invalid_numeric_value
+err_0149,usr_d73f14b9-70c6-4422-92f9-938b0e2ff1b1,2026-10-15 12:30:00,REWARD_CREDIT,-500.0,Completed,PayPal,negative_value_inappropriate
+err_0150,,2026-10-15 12:30:00,REWARD_CREDIT,150.0,Completed,PayPal,unexpected_null
+err_0151,usr_NON_EXISTENT_GHOST_9999,2026-10-15 12:30:00,REWARD_CREDIT,150.0,Completed,PayPal,orphan_record
+err_DUPE_EVENT_777,usr_c371de1a-5dae-4b1f-ae5a-b1cef2519f09,2026-10-15 12:30:00,REWARD_CREDIT,150.0,Completed,PayPal,duplicate_event
+err_0153,usr_a0c294ea-bf08-46af-8d59-28cc5818c150,2026-10-15 12:30:00,reward-payout-bonus,150.0,Completed,PayPal,inconsistent_naming
+err_0154,usr_55bdf211-e637-4b0d-945a-d61ecdf93dbb,2026-10-15 12:30:00,REWARD_CREDIT,150.0,Requested_Then_Instantly_Refunded_Without_Processing,PayPal,impossible_state_transition
+err_DUPLICATE_001,usr_214d544f-e177-4c2f-81fa-b879e693f3ef,2026-10-15 12:30:00,REWARD_CREDIT,150.0,Completed,PayPal,duplicate_id
+,usr_8453b7be-0856-4b8f-b3f4-1ff021f1963d,2026-10-15 12:30:00,REWARD_CREDIT,150.0,Completed,PayPal,missing_id
+err_0157,usr_4a647146-508f-4a9e-8418-e6630635cff2,,REWARD_CREDIT,150.0,Completed,PayPal,missing_timestamp
+err_0158,usr_4d9663cb-af1b-4385-8352-d3fb78c6195c,15/10/2026 25:99:00,REWARD_CREDIT,150.0,Completed,PayPal,malformed_date
+err_0159,usr_c7fab7d0-11cb-431c-ae62-ec30c16e839d,2026-10-15 12:30:00,REWARD_CREDIT,150.0,UNKNOWN_GLITCH,PayPal,invalid_status
+err_0160,usr_632c8365-c398-4814-9638-08888dc913b4,2026-10-15 12:30:00,REWARD_CREDIT,150.0,cOmPLeTeD,PayPal,inconsistent_capitalization
+err_0161,usr_45649c07-c4d8-4678-9bc5-9bad58fd7475,2026-10-15 12:30:00,  REWARD_CREDIT ,150.0,Completed   ,PayPal,trailing_spaces
+err_0162,usr_52abea9b-9727-4f86-8bd6-f1b47f6bf39e,2026-10-15 12:30:00,REWARD_CREDIT,ONE_HUNDRED,Completed,PayPal,invalid_numeric_value
+err_0163,usr_259529f6-5d2b-45bb-b1d8-7786bde86776,2026-10-15 12:30:00,REWARD_CREDIT,-500.0,Completed,PayPal,negative_value_inappropriate
+err_0164,,2026-10-15 12:30:00,REWARD_CREDIT,150.0,Completed,PayPal,unexpected_null
+err_0165,usr_NON_EXISTENT_GHOST_9999,2026-10-15 12:30:00,REWARD_CREDIT,150.0,Completed,PayPal,orphan_record
+err_DUPE_EVENT_777,usr_3b99d052-9a9d-4190-96b7-625d10e960fa,2026-10-15 12:30:00,REWARD_CREDIT,150.0,Completed,PayPal,duplicate_event
+err_0167,usr_5ede6888-5bba-4fcb-92aa-f7b7cf7f0552,2026-10-15 12:30:00,reward-payout-bonus,150.0,Completed,PayPal,inconsistent_naming
+err_0168,usr_5bc53f38-a4af-4be4-a51f-0ef6843774c8,2026-10-15 12:30:00,REWARD_CREDIT,150.0,Requested_Then_Instantly_Refunded_Without_Processing,PayPal,impossible_state_transition
+err_DUPLICATE_001,usr_820952be-e8c4-4e4c-a2d1-41fc02b8dc55,2026-10-15 12:30:00,REWARD_CREDIT,150.0,Completed,PayPal,duplicate_id
+,usr_80a167ab-9a06-4528-89fe-5b5b1f1e6a3b,2026-10-15 12:30:00,REWARD_CREDIT,150.0,Completed,PayPal,missing_id
+err_0171,usr_b522a3d9-f661-4acf-9d1d-b1f66129ecad,,REWARD_CREDIT,150.0,Completed,PayPal,missing_timestamp
+err_0172,usr_84b1bcf6-b3a1-4d29-b2b0-090603fca31d,15/10/2026 25:99:00,REWARD_CREDIT,150.0,Completed,PayPal,malformed_date
+err_0173,usr_a59857cc-5b83-4e4e-b300-b1914c040a9f,2026-10-15 12:30:00,REWARD_CREDIT,150.0,UNKNOWN_GLITCH,PayPal,invalid_status
+err_0174,usr_89113104-5ec6-4202-8daf-27809ae37941,2026-10-15 12:30:00,REWARD_CREDIT,150.0,cOmPLeTeD,PayPal,inconsistent_capitalization
+err_0175,usr_43d3db9c-5900-4b62-a4f2-d9ee5fa0f2f4,2026-10-15 12:30:00,  REWARD_CREDIT ,150.0,Completed   ,PayPal,trailing_spaces
+err_0176,usr_679f7866-e054-4140-9d3e-b1821b7612ae,2026-10-15 12:30:00,REWARD_CREDIT,ONE_HUNDRED,Completed,PayPal,invalid_numeric_value
+err_0177,usr_674c207f-b948-4a07-a00c-bf46a428cf22,2026-10-15 12:30:00,REWARD_CREDIT,-500.0,Completed,PayPal,negative_value_inappropriate
+err_0178,,2026-10-15 12:30:00,REWARD_CREDIT,150.0,Completed,PayPal,unexpected_null
+err_0179,usr_NON_EXISTENT_GHOST_9999,2026-10-15 12:30:00,REWARD_CREDIT,150.0,Completed,PayPal,orphan_record
+err_DUPE_EVENT_777,usr_3644799e-3f29-41ee-ba9c-b914e6769282,2026-10-15 12:30:00,REWARD_CREDIT,150.0,Completed,PayPal,duplicate_event
+err_0181,usr_159ab9af-d73c-406f-b633-704f51010656,2026-10-15 12:30:00,reward-payout-bonus,150.0,Completed,PayPal,inconsistent_naming
+err_0182,usr_5b42f356-db8a-4e8f-ab9b-df9c8ff3ca82,2026-10-15 12:30:00,REWARD_CREDIT,150.0,Requested_Then_Instantly_Refunded_Without_Processing,PayPal,impossible_state_transition
+err_DUPLICATE_001,usr_10f34dc7-6d47-4425-b8eb-6084367b1550,2026-10-15 12:30:00,REWARD_CREDIT,150.0,Completed,PayPal,duplicate_id
+,usr_71486fa6-0458-4c79-8f20-a901bfb03997,2026-10-15 12:30:00,REWARD_CREDIT,150.0,Completed,PayPal,missing_id
+err_0185,usr_f4c2f607-88f5-4c40-822a-e923e498e904,,REWARD_CREDIT,150.0,Completed,PayPal,missing_timestamp
+err_0186,usr_5eb936c9-fb83-4757-8708-bc6592121539,15/10/2026 25:99:00,REWARD_CREDIT,150.0,Completed,PayPal,malformed_date
+err_0187,usr_8dbdcf52-0261-43cb-8398-f37fc557df7c,2026-10-15 12:30:00,REWARD_CREDIT,150.0,UNKNOWN_GLITCH,PayPal,invalid_status
+err_0188,usr_751b2505-86fd-42d6-aee6-5df72c72cbd2,2026-10-15 12:30:00,REWARD_CREDIT,150.0,cOmPLeTeD,PayPal,inconsistent_capitalization
+err_0189,usr_5834cfb6-4c95-4cc2-9d76-e0eb27138c12,2026-10-15 12:30:00,  REWARD_CREDIT ,150.0,Completed   ,PayPal,trailing_spaces
+err_0190,usr_dd288ff3-67dd-489b-bb06-78a2f2130de3,2026-10-15 12:30:00,REWARD_CREDIT,ONE_HUNDRED,Completed,PayPal,invalid_numeric_value
+err_0191,usr_a3c98d32-efb9-4a67-8b77-fb35d16570e3,2026-10-15 12:30:00,REWARD_CREDIT,-500.0,Completed,PayPal,negative_value_inappropriate
+err_0192,,2026-10-15 12:30:00,REWARD_CREDIT,150.0,Completed,PayPal,unexpected_null
+err_0193,usr_NON_EXISTENT_GHOST_9999,2026-10-15 12:30:00,REWARD_CREDIT,150.0,Completed,PayPal,orphan_record
+err_DUPE_EVENT_777,usr_9dc9ec06-e1d0-4b48-a19f-f79a5ea72b5c,2026-10-15 12:30:00,REWARD_CREDIT,150.0,Completed,PayPal,duplicate_event
+err_0195,usr_059004ca-3dc0-4b6b-ac2d-d56bc7457ea0,2026-10-15 12:30:00,reward-payout-bonus,150.0,Completed,PayPal,inconsistent_naming
+err_0196,usr_c02b7070-619e-4288-b06f-8601f396cbc9,2026-10-15 12:30:00,REWARD_CREDIT,150.0,Requested_Then_Instantly_Refunded_Without_Processing,PayPal,impossible_state_transition
+err_DUPLICATE_001,usr_7ead9b60-d15a-4e16-9fad-7941c31bd6d0,2026-10-15 12:30:00,REWARD_CREDIT,150.0,Completed,PayPal,duplicate_id
+,usr_bba83ba2-1915-45d5-a9e2-937599a45c3c,2026-10-15 12:30:00,REWARD_CREDIT,150.0,Completed,PayPal,missing_id
+err_0199,usr_b602c782-bff1-4fe1-b603-078144a20081,,REWARD_CREDIT,150.0,Completed,PayPal,missing_timestamp
+err_0200,usr_e3dc6c78-f57d-4fbc-b20e-feb2e5c13483,15/10/2026 25:99:00,REWARD_CREDIT,150.0,Completed,PayPal,malformed_date
+err_0201,usr_3fe151f0-a7ea-4d9a-a51a-ddbbc6932d8b,2026-10-15 12:30:00,REWARD_CREDIT,150.0,UNKNOWN_GLITCH,PayPal,invalid_status
+err_0202,usr_683cdfd4-f802-4ebe-bf82-1a633a35a12e,2026-10-15 12:30:00,REWARD_CREDIT,150.0,cOmPLeTeD,PayPal,inconsistent_capitalization
+err_0203,usr_ff10d1ea-2f20-49c3-a1ca-134e7278cb21,2026-10-15 12:30:00,  REWARD_CREDIT ,150.0,Completed   ,PayPal,trailing_spaces
+err_0204,usr_06ea87da-993c-4145-b542-d1b26153bbe4,2026-10-15 12:30:00,REWARD_CREDIT,ONE_HUNDRED,Completed,PayPal,invalid_numeric_value
+err_0205,usr_a3e5498c-de2b-4f00-8e1b-fd0312eee406,2026-10-15 12:30:00,REWARD_CREDIT,-500.0,Completed,PayPal,negative_value_inappropriate
+err_0206,,2026-10-15 12:30:00,REWARD_CREDIT,150.0,Completed,PayPal,unexpected_null
+err_0207,usr_NON_EXISTENT_GHOST_9999,2026-10-15 12:30:00,REWARD_CREDIT,150.0,Completed,PayPal,orphan_record
+err_DUPE_EVENT_777,usr_0b7b49f8-d336-4971-a334-ab1c961a9a6b,2026-10-15 12:30:00,REWARD_CREDIT,150.0,Completed,PayPal,duplicate_event
+err_0209,usr_c8594497-c070-4320-9d65-fb49aee0c8aa,2026-10-15 12:30:00,reward-payout-bonus,150.0,Completed,PayPal,inconsistent_naming
+err_0210,usr_ae7c2f67-8456-45d1-93fe-e6548511ee70,2026-10-15 12:30:00,REWARD_CREDIT,150.0,Requested_Then_Instantly_Refunded_Without_Processing,PayPal,impossible_state_transition
+err_DUPLICATE_001,usr_ea2224c3-01a3-4372-b86a-d46709e8eaa4,2026-10-15 12:30:00,REWARD_CREDIT,150.0,Completed,PayPal,duplicate_id
+,usr_323989a0-68bc-498c-8892-c407a9903eef,2026-10-15 12:30:00,REWARD_CREDIT,150.0,Completed,PayPal,missing_id
+err_0213,usr_e7784266-774f-4d68-be95-6625d2d1031a,,REWARD_CREDIT,150.0,Completed,PayPal,missing_timestamp
+err_0214,usr_a6760db1-6f18-454a-a51e-20bdf971cd58,15/10/2026 25:99:00,REWARD_CREDIT,150.0,Completed,PayPal,malformed_date
+err_0215,usr_65871bf1-9750-48a4-bf11-c670422712c4,2026-10-15 12:30:00,REWARD_CREDIT,150.0,UNKNOWN_GLITCH,PayPal,invalid_status
+err_0216,usr_10bd7571-ab35-4338-8fe8-2d571d0d17cf,2026-10-15 12:30:00,REWARD_CREDIT,150.0,cOmPLeTeD,PayPal,inconsistent_capitalization
+err_0217,usr_be139f91-5cc2-498e-a255-8caa1c66da95,2026-10-15 12:30:00,  REWARD_CREDIT ,150.0,Completed   ,PayPal,trailing_spaces
+err_0218,usr_89b51e3f-25d9-48ef-acad-e90aa41af445,2026-10-15 12:30:00,REWARD_CREDIT,ONE_HUNDRED,Completed,PayPal,invalid_numeric_value
+err_0219,usr_4c655c79-329f-4989-a12b-b50434b3be30,2026-10-15 12:30:00,REWARD_CREDIT,-500.0,Completed,PayPal,negative_value_inappropriate
+err_0220,,2026-10-15 12:30:00,REWARD_CREDIT,150.0,Completed,PayPal,unexpected_null
+err_0221,usr_NON_EXISTENT_GHOST_9999,2026-10-15 12:30:00,REWARD_CREDIT,150.0,Completed,PayPal,orphan_record
+err_DUPE_EVENT_777,usr_65a81986-4e76-49b8-8b6c-99062e665333,2026-10-15 12:30:00,REWARD_CREDIT,150.0,Completed,PayPal,duplicate_event
+err_0223,usr_6a36d090-6a72-4f6d-a2d9-2227a2a0a499,2026-10-15 12:30:00,reward-payout-bonus,150.0,Completed,PayPal,inconsistent_naming
+err_0224,usr_34e7ec3c-8da5-456d-a8d6-f6abd2c63a1f,2026-10-15 12:30:00,REWARD_CREDIT,150.0,Requested_Then_Instantly_Refunded_Without_Processing,PayPal,impossible_state_transition
+err_DUPLICATE_001,usr_bb3d85fd-beac-450d-8e57-6db8c80a031e,2026-10-15 12:30:00,REWARD_CREDIT,150.0,Completed,PayPal,duplicate_id
+,usr_7729a74a-ad01-4a34-afe7-a9dad2b73ea1,2026-10-15 12:30:00,REWARD_CREDIT,150.0,Completed,PayPal,missing_id
+err_0227,usr_c31fb130-071f-4f20-9a46-819c58cd0fac,,REWARD_CREDIT,150.0,Completed,PayPal,missing_timestamp
+err_0228,usr_702aac45-7c1a-4ddd-a235-7728e1ff7dbe,15/10/2026 25:99:00,REWARD_CREDIT,150.0,Completed,PayPal,malformed_date
+err_0229,usr_a56e5e07-99ed-49bd-ba11-90cb2a7cf55d,2026-10-15 12:30:00,REWARD_CREDIT,150.0,UNKNOWN_GLITCH,PayPal,invalid_status
+err_0230,usr_9348bee1-d9d0-4810-81fa-c9ed28ce16d4,2026-10-15 12:30:00,REWARD_CREDIT,150.0,cOmPLeTeD,PayPal,inconsistent_capitalization
+err_0231,usr_4183d9f4-e04c-4edf-a3b3-578bca624017,2026-10-15 12:30:00,  REWARD_CREDIT ,150.0,Completed   ,PayPal,trailing_spaces
+err_0232,usr_6b21fa07-5ee7-43d9-b752-79e58d4e3b33,2026-10-15 12:30:00,REWARD_CREDIT,ONE_HUNDRED,Completed,PayPal,invalid_numeric_value
+err_0233,usr_4b5fed9c-8348-45bb-a8fc-2b72de16f8b2,2026-10-15 12:30:00,REWARD_CREDIT,-500.0,Completed,PayPal,negative_value_inappropriate
+err_0234,,2026-10-15 12:30:00,REWARD_CREDIT,150.0,Completed,PayPal,unexpected_null
+err_0235,usr_NON_EXISTENT_GHOST_9999,2026-10-15 12:30:00,REWARD_CREDIT,150.0,Completed,PayPal,orphan_record
+err_DUPE_EVENT_777,usr_704bbd31-876a-49ab-95fc-90b52ef0936a,2026-10-15 12:30:00,REWARD_CREDIT,150.0,Completed,PayPal,duplicate_event
+err_0237,usr_ce3bd39c-20d3-4332-b4da-9d848eaa1677,2026-10-15 12:30:00,reward-payout-bonus,150.0,Completed,PayPal,inconsistent_naming
+err_0238,usr_a1a286dd-193c-4431-b473-8072ccd1f758,2026-10-15 12:30:00,REWARD_CREDIT,150.0,Requested_Then_Instantly_Refunded_Without_Processing,PayPal,impossible_state_transition
+err_DUPLICATE_001,usr_210478a9-5a3f-4314-8e59-d0000448184d,2026-10-15 12:30:00,REWARD_CREDIT,150.0,Completed,PayPal,duplicate_id
+,usr_be88b262-5877-4bc0-8306-023cfe5c689e,2026-10-15 12:30:00,REWARD_CREDIT,150.0,Completed,PayPal,missing_id
+err_0241,usr_20f52852-f448-4bb4-aad1-25aa96867353,,REWARD_CREDIT,150.0,Completed,PayPal,missing_timestamp
+err_0242,usr_2c1b97fa-24d8-4fe3-95de-ce18da43bd25,15/10/2026 25:99:00,REWARD_CREDIT,150.0,Completed,PayPal,malformed_date
+err_0243,usr_2daaf045-2169-4d70-a7df-daeb583f493e,2026-10-15 12:30:00,REWARD_CREDIT,150.0,UNKNOWN_GLITCH,PayPal,invalid_status
+err_0244,usr_4e684b07-6533-4eb7-96a0-899decb8efe7,2026-10-15 12:30:00,REWARD_CREDIT,150.0,cOmPLeTeD,PayPal,inconsistent_capitalization
+err_0245,usr_7a0bdb3b-f61c-4543-a890-aa0c7ab4c12c,2026-10-15 12:30:00,  REWARD_CREDIT ,150.0,Completed   ,PayPal,trailing_spaces
+err_0246,usr_ea47cbed-3f3c-4556-ab44-13dbf2567f39,2026-10-15 12:30:00,REWARD_CREDIT,ONE_HUNDRED,Completed,PayPal,invalid_numeric_value
+err_0247,usr_38d7e2b0-24ba-4620-9a7d-b256626e6771,2026-10-15 12:30:00,REWARD_CREDIT,-500.0,Completed,PayPal,negative_value_inappropriate
+err_0248,,2026-10-15 12:30:00,REWARD_CREDIT,150.0,Completed,PayPal,unexpected_null
+err_0249,usr_NON_EXISTENT_GHOST_9999,2026-10-15 12:30:00,REWARD_CREDIT,150.0,Completed,PayPal,orphan_record
+err_DUPE_EVENT_777,usr_f76988e9-674e-41d9-9110-5510f72acf46,2026-10-15 12:30:00,REWARD_CREDIT,150.0,Completed,PayPal,duplicate_event
+err_0251,usr_71f469ac-d931-4b37-90a7-f92adc900762,2026-10-15 12:30:00,reward-payout-bonus,150.0,Completed,PayPal,inconsistent_naming
+err_0252,usr_0930627f-1e8f-4a1a-9ae2-0c21a8e5f765,2026-10-15 12:30:00,REWARD_CREDIT,150.0,Requested_Then_Instantly_Refunded_Without_Processing,PayPal,impossible_state_transition
+err_DUPLICATE_001,usr_3cfc5983-aead-4000-9d94-2233d15c1945,2026-10-15 12:30:00,REWARD_CREDIT,150.0,Completed,PayPal,duplicate_id
+,usr_1b95093e-fe98-4b00-bdc2-cc1e7bfce25e,2026-10-15 12:30:00,REWARD_CREDIT,150.0,Completed,PayPal,missing_id
+err_0255,usr_bc4ce250-02e3-40a6-ad56-595b272fb2cb,,REWARD_CREDIT,150.0,Completed,PayPal,missing_timestamp
+err_0256,usr_e3f9eec8-4d60-4544-9ac7-1c8858bd293d,15/10/2026 25:99:00,REWARD_CREDIT,150.0,Completed,PayPal,malformed_date
+err_0257,usr_e70d75c6-e607-47ea-9e37-fa3e8b37e9da,2026-10-15 12:30:00,REWARD_CREDIT,150.0,UNKNOWN_GLITCH,PayPal,invalid_status
+err_0258,usr_2313b089-0a4c-4ae4-a31d-72e46ed28e7f,2026-10-15 12:30:00,REWARD_CREDIT,150.0,cOmPLeTeD,PayPal,inconsistent_capitalization
+err_0259,usr_799ea604-3824-46b7-a2d7-e25e22179c82,2026-10-15 12:30:00,  REWARD_CREDIT ,150.0,Completed   ,PayPal,trailing_spaces
+err_0260,usr_9ca2d2e6-20b1-4262-aca1-a8de31fb4aae,2026-10-15 12:30:00,REWARD_CREDIT,ONE_HUNDRED,Completed,PayPal,invalid_numeric_value
+err_0261,usr_80b51640-1e23-4321-817d-8eabb80520d1,2026-10-15 12:30:00,REWARD_CREDIT,-500.0,Completed,PayPal,negative_value_inappropriate
+err_0262,,2026-10-15 12:30:00,REWARD_CREDIT,150.0,Completed,PayPal,unexpected_null
+err_0263,usr_NON_EXISTENT_GHOST_9999,2026-10-15 12:30:00,REWARD_CREDIT,150.0,Completed,PayPal,orphan_record
+err_DUPE_EVENT_777,usr_e48a78a4-5723-4917-a00e-5bcde62d2d0a,2026-10-15 12:30:00,REWARD_CREDIT,150.0,Completed,PayPal,duplicate_event
+err_0265,usr_984c254e-b82e-45c3-9ddf-fc6464e4866b,2026-10-15 12:30:00,reward-payout-bonus,150.0,Completed,PayPal,inconsistent_naming
+err_0266,usr_8d4b758e-be9b-4fc1-a750-13542abedfeb,2026-10-15 12:30:00,REWARD_CREDIT,150.0,Requested_Then_Instantly_Refunded_Without_Processing,PayPal,impossible_state_transition
+err_DUPLICATE_001,usr_e8e4fb35-3946-4433-9635-2458d91b6438,2026-10-15 12:30:00,REWARD_CREDIT,150.0,Completed,PayPal,duplicate_id
+,usr_ecce332e-bcb1-434c-aa2d-b910dabc275c,2026-10-15 12:30:00,REWARD_CREDIT,150.0,Completed,PayPal,missing_id
+err_0269,usr_43b9eed9-7ecb-4190-bbbd-189af778b675,,REWARD_CREDIT,150.0,Completed,PayPal,missing_timestamp
+err_0270,usr_42ed5502-d74b-45c4-abb0-2b9a25667ba1,15/10/2026 25:99:00,REWARD_CREDIT,150.0,Completed,PayPal,malformed_date
+err_0271,usr_8ae798ca-635b-4f18-8217-fb3893f57328,2026-10-15 12:30:00,REWARD_CREDIT,150.0,UNKNOWN_GLITCH,PayPal,invalid_status
+err_0272,usr_664639be-ff58-4b28-b2c8-e04057e9e2db,2026-10-15 12:30:00,REWARD_CREDIT,150.0,cOmPLeTeD,PayPal,inconsistent_capitalization
+err_0273,usr_ad5f06c2-1930-404a-ae42-048ff74cd8dd,2026-10-15 12:30:00,  REWARD_CREDIT ,150.0,Completed   ,PayPal,trailing_spaces
+err_0274,usr_35cec53a-4646-4031-ada6-ea2c1e83498a,2026-10-15 12:30:00,REWARD_CREDIT,ONE_HUNDRED,Completed,PayPal,invalid_numeric_value
+err_0275,usr_6002f7a9-96e1-49c2-b3d4-0e85398410bc,2026-10-15 12:30:00,REWARD_CREDIT,-500.0,Completed,PayPal,negative_value_inappropriate
+err_0276,,2026-10-15 12:30:00,REWARD_CREDIT,150.0,Completed,PayPal,unexpected_null
+err_0277,usr_NON_EXISTENT_GHOST_9999,2026-10-15 12:30:00,REWARD_CREDIT,150.0,Completed,PayPal,orphan_record
+err_DUPE_EVENT_777,usr_563466b6-c54b-4b34-a2a9-0e4772e2cbe9,2026-10-15 12:30:00,REWARD_CREDIT,150.0,Completed,PayPal,duplicate_event
+err_0279,usr_8c8906b9-1c7d-48e5-ae32-0828be96e741,2026-10-15 12:30:00,reward-payout-bonus,150.0,Completed,PayPal,inconsistent_naming
+err_0280,usr_c8980db8-5eec-4b19-84cb-ba131d9b3782,2026-10-15 12:30:00,REWARD_CREDIT,150.0,Requested_Then_Instantly_Refunded_Without_Processing,PayPal,impossible_state_transition
+err_DUPLICATE_001,usr_047d90dd-fc62-4206-b9d4-ae0729216f5f,2026-10-15 12:30:00,REWARD_CREDIT,150.0,Completed,PayPal,duplicate_id
+,usr_17c43fe6-8862-4f77-97ed-4f7029a3d96f,2026-10-15 12:30:00,REWARD_CREDIT,150.0,Completed,PayPal,missing_id
+err_0283,usr_bd112f41-d597-4a4c-9324-1aa60b7af6ea,,REWARD_CREDIT,150.0,Completed,PayPal,missing_timestamp
+err_0284,usr_4086902b-9fb5-46d5-8283-9a1cba2b421c,15/10/2026 25:99:00,REWARD_CREDIT,150.0,Completed,PayPal,malformed_date
+err_0285,usr_85dfb290-31f1-49d3-a9c4-2ec95b2a93c7,2026-10-15 12:30:00,REWARD_CREDIT,150.0,UNKNOWN_GLITCH,PayPal,invalid_status
+err_0286,usr_037956c5-13e5-4114-8aaf-5ddb99722c7b,2026-10-15 12:30:00,REWARD_CREDIT,150.0,cOmPLeTeD,PayPal,inconsistent_capitalization
+err_0287,usr_d3bdb31a-f71b-47cc-8e6f-5bc88fa23de5,2026-10-15 12:30:00,  REWARD_CREDIT ,150.0,Completed   ,PayPal,trailing_spaces
+err_0288,usr_8059c946-eb7f-4cfe-81e8-3046f369038a,2026-10-15 12:30:00,REWARD_CREDIT,ONE_HUNDRED,Completed,PayPal,invalid_numeric_value
+err_0289,usr_7a220665-acf6-45c8-b243-e81188808f0f,2026-10-15 12:30:00,REWARD_CREDIT,-500.0,Completed,PayPal,negative_value_inappropriate
+err_0290,,2026-10-15 12:30:00,REWARD_CREDIT,150.0,Completed,PayPal,unexpected_null
+err_0291,usr_NON_EXISTENT_GHOST_9999,2026-10-15 12:30:00,REWARD_CREDIT,150.0,Completed,PayPal,orphan_record
+err_DUPE_EVENT_777,usr_3e5ab1a7-79ce-45f7-9ab3-f0c1f55108ca,2026-10-15 12:30:00,REWARD_CREDIT,150.0,Completed,PayPal,duplicate_event
+err_0293,usr_fceaa7fb-9bdd-4ade-bcd2-67a1b5b06b3c,2026-10-15 12:30:00,reward-payout-bonus,150.0,Completed,PayPal,inconsistent_naming
+err_0294,usr_8586757d-ab87-4de6-8c65-65990186a1dc,2026-10-15 12:30:00,REWARD_CREDIT,150.0,Requested_Then_Instantly_Refunded_Without_Processing,PayPal,impossible_state_transition
+err_DUPLICATE_001,usr_87f3b216-2344-4b2e-935b-db574c3f5c4a,2026-10-15 12:30:00,REWARD_CREDIT,150.0,Completed,PayPal,duplicate_id
+,usr_c0fc031b-5ea7-4019-be15-008801a20b89,2026-10-15 12:30:00,REWARD_CREDIT,150.0,Completed,PayPal,missing_id
+err_0297,usr_92c3f0a0-0048-45af-95ba-aef3f79ea1f2,,REWARD_CREDIT,150.0,Completed,PayPal,missing_timestamp
+err_0298,usr_5df2ada7-f0d6-47b2-9ee1-48f10c7afb4b,15/10/2026 25:99:00,REWARD_CREDIT,150.0,Completed,PayPal,malformed_date
+err_0299,usr_2b5b5fb3-5a21-4162-8a4b-c4bdca379ceb,2026-10-15 12:30:00,REWARD_CREDIT,150.0,UNKNOWN_GLITCH,PayPal,invalid_status
+err_0300,usr_683eb74d-70d6-40a7-b99a-ac395dec352a,2026-10-15 12:30:00,REWARD_CREDIT,150.0,cOmPLeTeD,PayPal,inconsistent_capitalization
+err_0301,usr_adb0eeeb-79bf-4411-9f5f-b223b38d0ecb,2026-10-15 12:30:00,  REWARD_CREDIT ,150.0,Completed   ,PayPal,trailing_spaces
+err_0302,usr_c25a61ce-9f2a-4799-9a5f-be86c306e772,2026-10-15 12:30:00,REWARD_CREDIT,ONE_HUNDRED,Completed,PayPal,invalid_numeric_value
+err_0303,usr_23cf23e8-5a9a-4fa7-ba05-eeca4248c7c8,2026-10-15 12:30:00,REWARD_CREDIT,-500.0,Completed,PayPal,negative_value_inappropriate
+err_0304,,2026-10-15 12:30:00,REWARD_CREDIT,150.0,Completed,PayPal,unexpected_null
+err_0305,usr_NON_EXISTENT_GHOST_9999,2026-10-15 12:30:00,REWARD_CREDIT,150.0,Completed,PayPal,orphan_record
+err_DUPE_EVENT_777,usr_f8b84739-7cfc-4745-84ce-75fad251b9d1,2026-10-15 12:30:00,REWARD_CREDIT,150.0,Completed,PayPal,duplicate_event
+err_0307,usr_ed447fe8-8c15-4949-a61a-06382c847da5,2026-10-15 12:30:00,reward-payout-bonus,150.0,Completed,PayPal,inconsistent_naming
+err_0308,usr_6771ac0d-5676-42ae-9d3f-cafc01e888ac,2026-10-15 12:30:00,REWARD_CREDIT,150.0,Requested_Then_Instantly_Refunded_Without_Processing,PayPal,impossible_state_transition
+err_DUPLICATE_001,usr_da24832b-50b5-46a5-b276-ab04c3e87e39,2026-10-15 12:30:00,REWARD_CREDIT,150.0,Completed,PayPal,duplicate_id
+,usr_1729f8d4-9899-4ede-96eb-b7d842805aff,2026-10-15 12:30:00,REWARD_CREDIT,150.0,Completed,PayPal,missing_id
+err_0311,usr_d4217004-e3b3-40ab-8656-17f39da2fa37,,REWARD_CREDIT,150.0,Completed,PayPal,missing_timestamp
+err_0312,usr_cc00ab87-8cc2-40a7-8b47-dd85b41a65d2,15/10/2026 25:99:00,REWARD_CREDIT,150.0,Completed,PayPal,malformed_date
+err_0313,usr_1a263f73-04f7-4c2b-88ae-cbb3020f14f9,2026-10-15 12:30:00,REWARD_CREDIT,150.0,UNKNOWN_GLITCH,PayPal,invalid_status
+err_0314,usr_8a2d14e9-be93-4b5c-a844-626b61b5a523,2026-10-15 12:30:00,REWARD_CREDIT,150.0,cOmPLeTeD,PayPal,inconsistent_capitalization
+err_0315,usr_400830c5-d8c7-46fa-aee4-b25cdd32706a,2026-10-15 12:30:00,  REWARD_CREDIT ,150.0,Completed   ,PayPal,trailing_spaces
+err_0316,usr_907ac891-0789-4904-8da8-29a87e097bdf,2026-10-15 12:30:00,REWARD_CREDIT,ONE_HUNDRED,Completed,PayPal,invalid_numeric_value
+err_0317,usr_3990d830-7c41-45ef-891f-a845266f6619,2026-10-15 12:30:00,REWARD_CREDIT,-500.0,Completed,PayPal,negative_value_inappropriate
+err_0318,,2026-10-15 12:30:00,REWARD_CREDIT,150.0,Completed,PayPal,unexpected_null
+err_0319,usr_NON_EXISTENT_GHOST_9999,2026-10-15 12:30:00,REWARD_CREDIT,150.0,Completed,PayPal,orphan_record
+err_DUPE_EVENT_777,usr_88448cad-52dc-463e-8086-97f1423e00af,2026-10-15 12:30:00,REWARD_CREDIT,150.0,Completed,PayPal,duplicate_event
+err_0321,usr_43146aac-40c3-4eb5-9333-6ba603941261,2026-10-15 12:30:00,reward-payout-bonus,150.0,Completed,PayPal,inconsistent_naming
+err_0322,usr_7928707b-d7e7-416a-a6ab-8cf4686c1ec1,2026-10-15 12:30:00,REWARD_CREDIT,150.0,Requested_Then_Instantly_Refunded_Without_Processing,PayPal,impossible_state_transition
+err_DUPLICATE_001,usr_ee4e1dde-c139-4a0c-be24-ee5f49dcf477,2026-10-15 12:30:00,REWARD_CREDIT,150.0,Completed,PayPal,duplicate_id
+,usr_f5274012-15f5-41e5-bedf-d57dd9d82454,2026-10-15 12:30:00,REWARD_CREDIT,150.0,Completed,PayPal,missing_id
+err_0325,usr_b329f336-b825-4383-8cd8-2542a427c4a6,,REWARD_CREDIT,150.0,Completed,PayPal,missing_timestamp
+err_0326,usr_9f95986e-8eae-4879-9994-3511eccc7586,15/10/2026 25:99:00,REWARD_CREDIT,150.0,Completed,PayPal,malformed_date
+err_0327,usr_74e3ce10-9f02-4d27-8438-a3e68eb39425,2026-10-15 12:30:00,REWARD_CREDIT,150.0,UNKNOWN_GLITCH,PayPal,invalid_status
+err_0328,usr_6620a9f5-dbf5-4611-96c0-dd713d2ce397,2026-10-15 12:30:00,REWARD_CREDIT,150.0,cOmPLeTeD,PayPal,inconsistent_capitalization
+err_0329,usr_e5037a5b-f0aa-48eb-8c85-96c3088317ab,2026-10-15 12:30:00,  REWARD_CREDIT ,150.0,Completed   ,PayPal,trailing_spaces
+err_0330,usr_61e7a698-d86b-4ca6-8ab5-ac897503316d,2026-10-15 12:30:00,REWARD_CREDIT,ONE_HUNDRED,Completed,PayPal,invalid_numeric_value
+err_0331,usr_c4ffe345-84fa-46b7-8d94-56d5474c909f,2026-10-15 12:30:00,REWARD_CREDIT,-500.0,Completed,PayPal,negative_value_inappropriate
+err_0332,,2026-10-15 12:30:00,REWARD_CREDIT,150.0,Completed,PayPal,unexpected_null
+err_0333,usr_NON_EXISTENT_GHOST_9999,2026-10-15 12:30:00,REWARD_CREDIT,150.0,Completed,PayPal,orphan_record
+err_DUPE_EVENT_777,usr_46e63bea-fe1d-4408-9c8d-e99f4d9e3ab4,2026-10-15 12:30:00,REWARD_CREDIT,150.0,Completed,PayPal,duplicate_event
+err_0335,usr_45a238b7-716d-4607-b33a-6a9ecfafd7e3,2026-10-15 12:30:00,reward-payout-bonus,150.0,Completed,PayPal,inconsistent_naming
+err_0336,usr_73654fd4-dd07-4cc2-8ede-2415d5963cc4,2026-10-15 12:30:00,REWARD_CREDIT,150.0,Requested_Then_Instantly_Refunded_Without_Processing,PayPal,impossible_state_transition
+err_DUPLICATE_001,usr_ebe9e8a4-6511-4fe7-83c4-0860f8106455,2026-10-15 12:30:00,REWARD_CREDIT,150.0,Completed,PayPal,duplicate_id
+,usr_31ad140f-32c4-4615-b41f-a975c22f00ae,2026-10-15 12:30:00,REWARD_CREDIT,150.0,Completed,PayPal,missing_id
+err_0339,usr_fe7dd123-d03e-44ad-ab6b-4710682d82b1,,REWARD_CREDIT,150.0,Completed,PayPal,missing_timestamp
+err_0340,usr_9ecd701c-3cc5-46ee-a01f-c4693ceee1a7,15/10/2026 25:99:00,REWARD_CREDIT,150.0,Completed,PayPal,malformed_date
+err_0341,usr_54b89e32-2aee-4e88-9822-9b0501ae9b97,2026-10-15 12:30:00,REWARD_CREDIT,150.0,UNKNOWN_GLITCH,PayPal,invalid_status
+err_0342,usr_29c1bfe6-3391-496d-aa76-af52a7188d1b,2026-10-15 12:30:00,REWARD_CREDIT,150.0,cOmPLeTeD,PayPal,inconsistent_capitalization
+err_0343,usr_468f8d6d-0767-4545-997f-abb9d50e32c1,2026-10-15 12:30:00,  REWARD_CREDIT ,150.0,Completed   ,PayPal,trailing_spaces
+err_0344,usr_c7ccc562-70b5-4ddd-bbc9-49a89717b3b7,2026-10-15 12:30:00,REWARD_CREDIT,ONE_HUNDRED,Completed,PayPal,invalid_numeric_value
+err_0345,usr_8e1e9a15-1dea-4436-95f6-f2ed1f0c7021,2026-10-15 12:30:00,REWARD_CREDIT,-500.0,Completed,PayPal,negative_value_inappropriate
+err_0346,,2026-10-15 12:30:00,REWARD_CREDIT,150.0,Completed,PayPal,unexpected_null
+err_0347,usr_NON_EXISTENT_GHOST_9999,2026-10-15 12:30:00,REWARD_CREDIT,150.0,Completed,PayPal,orphan_record
+err_DUPE_EVENT_777,usr_9fd37d32-4503-4327-9a7e-af7557ef9997,2026-10-15 12:30:00,REWARD_CREDIT,150.0,Completed,PayPal,duplicate_event
+err_0349,usr_3c9500c8-1ed4-4d61-bab1-cfdbb8e0041c,2026-10-15 12:30:00,reward-payout-bonus,150.0,Completed,PayPal,inconsistent_naming
+err_0350,usr_9eb0aa36-5809-441b-84d5-2fe727fbeada,2026-10-15 12:30:00,REWARD_CREDIT,150.0,Requested_Then_Instantly_Refunded_Without_Processing,PayPal,impossible_state_transition
+err_DUPLICATE_001,usr_208261f7-a8a1-4d30-8fb7-a5385cd79fce,2026-10-15 12:30:00,REWARD_CREDIT,150.0,Completed,PayPal,duplicate_id
+,usr_64c38996-7e7f-4757-9800-8ec76dc7537d,2026-10-15 12:30:00,REWARD_CREDIT,150.0,Completed,PayPal,missing_id
+err_0353,usr_560edf92-f5c8-4a7f-84ab-1b4dbf706359,,REWARD_CREDIT,150.0,Completed,PayPal,missing_timestamp
+err_0354,usr_c42e7ba3-fef6-4d32-afc6-389733cf675e,15/10/2026 25:99:00,REWARD_CREDIT,150.0,Completed,PayPal,malformed_date
+err_0355,usr_226f159a-fd92-402a-9c5f-376473a8bfb3,2026-10-15 12:30:00,REWARD_CREDIT,150.0,UNKNOWN_GLITCH,PayPal,invalid_status
+err_0356,usr_0a6a09f0-a451-4cc0-a168-02b3931a6ede,2026-10-15 12:30:00,REWARD_CREDIT,150.0,cOmPLeTeD,PayPal,inconsistent_capitalization
+err_0357,usr_10d5b676-a519-44b8-b3a7-c12e1da9ff0a,2026-10-15 12:30:00,  REWARD_CREDIT ,150.0,Completed   ,PayPal,trailing_spaces
+err_0358,usr_cc857a7c-7125-4993-807e-42ed28f425dd,2026-10-15 12:30:00,REWARD_CREDIT,ONE_HUNDRED,Completed,PayPal,invalid_numeric_value
+err_0359,usr_42a5ed8d-17ba-4bb5-ac66-9d2d8c5c772b,2026-10-15 12:30:00,REWARD_CREDIT,-500.0,Completed,PayPal,negative_value_inappropriate
+err_0360,,2026-10-15 12:30:00,REWARD_CREDIT,150.0,Completed,PayPal,unexpected_null
+err_0361,usr_NON_EXISTENT_GHOST_9999,2026-10-15 12:30:00,REWARD_CREDIT,150.0,Completed,PayPal,orphan_record
+err_DUPE_EVENT_777,usr_b463a65c-27f8-4669-90d5-19c3cb6a13ad,2026-10-15 12:30:00,REWARD_CREDIT,150.0,Completed,PayPal,duplicate_event
+err_0363,usr_0e101eb6-8b32-462c-8c0f-906023458cd1,2026-10-15 12:30:00,reward-payout-bonus,150.0,Completed,PayPal,inconsistent_naming
+err_0364,usr_e2a91cc6-86b3-4aaa-b98c-b922ccc2efc3,2026-10-15 12:30:00,REWARD_CREDIT,150.0,Requested_Then_Instantly_Refunded_Without_Processing,PayPal,impossible_state_transition
+err_DUPLICATE_001,usr_66d4bcc6-9a65-43c3-ac84-7efdf79be9e5,2026-10-15 12:30:00,REWARD_CREDIT,150.0,Completed,PayPal,duplicate_id
+,usr_25b2a887-9426-4d9a-8d6a-6843da88852e,2026-10-15 12:30:00,REWARD_CREDIT,150.0,Completed,PayPal,missing_id
+err_0367,usr_34f7e658-d07d-46cc-be9e-7d2fb0207c9d,,REWARD_CREDIT,150.0,Completed,PayPal,missing_timestamp
+err_0368,usr_929a5a81-6df0-4e8a-bbff-53d433f5d7e9,15/10/2026 25:99:00,REWARD_CREDIT,150.0,Completed,PayPal,malformed_date
+err_0369,usr_7cd4d6e5-eefb-4c99-a1d3-234791996409,2026-10-15 12:30:00,REWARD_CREDIT,150.0,UNKNOWN_GLITCH,PayPal,invalid_status
+err_0370,usr_9089cb2c-0152-4b9c-9778-5f12afe05a67,2026-10-15 12:30:00,REWARD_CREDIT,150.0,cOmPLeTeD,PayPal,inconsistent_capitalization
+err_0371,usr_b5f56f49-4486-4c84-b485-9743c3cc8cdb,2026-10-15 12:30:00,  REWARD_CREDIT ,150.0,Completed   ,PayPal,trailing_spaces
+err_0372,usr_7da9db2f-c751-43a7-86cb-9400604e0b4a,2026-10-15 12:30:00,REWARD_CREDIT,ONE_HUNDRED,Completed,PayPal,invalid_numeric_value
+err_0373,usr_1ef0b52a-0d30-44de-a546-f71537e665a1,2026-10-15 12:30:00,REWARD_CREDIT,-500.0,Completed,PayPal,negative_value_inappropriate
+err_0374,,2026-10-15 12:30:00,REWARD_CREDIT,150.0,Completed,PayPal,unexpected_null
+err_0375,usr_NON_EXISTENT_GHOST_9999,2026-10-15 12:30:00,REWARD_CREDIT,150.0,Completed,PayPal,orphan_record
+err_DUPE_EVENT_777,usr_f91a827e-5bfb-4d12-81ef-a8ecf0c81531,2026-10-15 12:30:00,REWARD_CREDIT,150.0,Completed,PayPal,duplicate_event
+err_0377,usr_f2fca46c-9912-43a7-af9c-ed7d94361cc6,2026-10-15 12:30:00,reward-payout-bonus,150.0,Completed,PayPal,inconsistent_naming
+err_0378,usr_fd24fe77-afcb-4abf-b494-9ca829bacbd3,2026-10-15 12:30:00,REWARD_CREDIT,150.0,Requested_Then_Instantly_Refunded_Without_Processing,PayPal,impossible_state_transition
+err_DUPLICATE_001,usr_37a0813c-a859-466d-801d-456a67124a59,2026-10-15 12:30:00,REWARD_CREDIT,150.0,Completed,PayPal,duplicate_id
+,usr_3339a33e-d823-41ab-acaf-5e7b283be025,2026-10-15 12:30:00,REWARD_CREDIT,150.0,Completed,PayPal,missing_id
+err_0381,usr_1e62b920-bdae-40e7-8c52-1fb42cc41f04,,REWARD_CREDIT,150.0,Completed,PayPal,missing_timestamp
+err_0382,usr_6e782552-758e-4088-9606-5a5b46af7e51,15/10/2026 25:99:00,REWARD_CREDIT,150.0,Completed,PayPal,malformed_date
+err_0383,usr_0b212bc1-8846-4c3a-8490-304353fa6374,2026-10-15 12:30:00,REWARD_CREDIT,150.0,UNKNOWN_GLITCH,PayPal,invalid_status
+err_0384,usr_699b2e44-abbd-4286-8197-d76c621509c5,2026-10-15 12:30:00,REWARD_CREDIT,150.0,cOmPLeTeD,PayPal,inconsistent_capitalization
+err_0385,usr_c7ec5df1-cfff-48c6-a46d-99251eacd0c3,2026-10-15 12:30:00,  REWARD_CREDIT ,150.0,Completed   ,PayPal,trailing_spaces
+err_0386,usr_0e77151d-4497-4339-ac59-c84bdaf3bc48,2026-10-15 12:30:00,REWARD_CREDIT,ONE_HUNDRED,Completed,PayPal,invalid_numeric_value
+err_0387,usr_1cfb2756-b92d-4618-a0d3-f309eeb31aa8,2026-10-15 12:30:00,REWARD_CREDIT,-500.0,Completed,PayPal,negative_value_inappropriate
+err_0388,,2026-10-15 12:30:00,REWARD_CREDIT,150.0,Completed,PayPal,unexpected_null
+err_0389,usr_NON_EXISTENT_GHOST_9999,2026-10-15 12:30:00,REWARD_CREDIT,150.0,Completed,PayPal,orphan_record
+err_DUPE_EVENT_777,usr_59ee7ce2-0ef1-459c-a4e7-7c5951243c75,2026-10-15 12:30:00,REWARD_CREDIT,150.0,Completed,PayPal,duplicate_event
+err_0391,usr_a9efccd2-4583-449b-a0e9-55f8b818adef,2026-10-15 12:30:00,reward-payout-bonus,150.0,Completed,PayPal,inconsistent_naming
+err_0392,usr_c35b9575-f835-4c0e-9e18-6240f18e559a,2026-10-15 12:30:00,REWARD_CREDIT,150.0,Requested_Then_Instantly_Refunded_Without_Processing,PayPal,impossible_state_transition
+err_DUPLICATE_001,usr_2a4a6b03-19c3-4925-96c7-3163f4c7abd9,2026-10-15 12:30:00,REWARD_CREDIT,150.0,Completed,PayPal,duplicate_id
+,usr_d913703d-ecad-4fe9-a194-496762eb0aab,2026-10-15 12:30:00,REWARD_CREDIT,150.0,Completed,PayPal,missing_id
+err_0395,usr_931c0708-2378-42f6-a614-8721318fd157,,REWARD_CREDIT,150.0,Completed,PayPal,missing_timestamp
+err_0396,usr_29dc5ffa-29e6-4704-8909-615662e5f83d,15/10/2026 25:99:00,REWARD_CREDIT,150.0,Completed,PayPal,malformed_date
+err_0397,usr_66a7581e-de9a-4abb-923d-8d529fef0334,2026-10-15 12:30:00,REWARD_CREDIT,150.0,UNKNOWN_GLITCH,PayPal,invalid_status
+err_0398,usr_8a71f698-1b84-467f-b50d-5bcad6e1d4e3,2026-10-15 12:30:00,REWARD_CREDIT,150.0,cOmPLeTeD,PayPal,inconsistent_capitalization
+err_0399,usr_690783ce-a6ac-46d1-9e18-cfc59d0f30eb,2026-10-15 12:30:00,  REWARD_CREDIT ,150.0,Completed   ,PayPal,trailing_spaces
+err_0400,usr_6fa197df-c627-49ec-aab8-3f615955dd47,2026-10-15 12:30:00,REWARD_CREDIT,ONE_HUNDRED,Completed,PayPal,invalid_numeric_value
+err_0401,usr_12334a1c-c162-4262-a4c8-2d3654b55305,2026-10-15 12:30:00,REWARD_CREDIT,-500.0,Completed,PayPal,negative_value_inappropriate
+err_0402,,2026-10-15 12:30:00,REWARD_CREDIT,150.0,Completed,PayPal,unexpected_null
+err_0403,usr_NON_EXISTENT_GHOST_9999,2026-10-15 12:30:00,REWARD_CREDIT,150.0,Completed,PayPal,orphan_record
+err_DUPE_EVENT_777,usr_c58a6c1e-ab56-4a5f-a90e-0f270b961c59,2026-10-15 12:30:00,REWARD_CREDIT,150.0,Completed,PayPal,duplicate_event
+err_0405,usr_4c4e44a8-7128-44a0-b967-1af4b19197d4,2026-10-15 12:30:00,reward-payout-bonus,150.0,Completed,PayPal,inconsistent_naming
+err_0406,usr_0a072daa-4355-47f6-ac5d-a1f8c1e5a6d7,2026-10-15 12:30:00,REWARD_CREDIT,150.0,Requested_Then_Instantly_Refunded_Without_Processing,PayPal,impossible_state_transition
+err_DUPLICATE_001,usr_167960ff-097e-41c2-929b-58ec0910bc23,2026-10-15 12:30:00,REWARD_CREDIT,150.0,Completed,PayPal,duplicate_id
+,usr_b733d599-b4e7-4855-a130-869d1b312581,2026-10-15 12:30:00,REWARD_CREDIT,150.0,Completed,PayPal,missing_id
+err_0409,usr_a7c4c380-a1c9-49f1-9e2d-c59d556f663e,,REWARD_CREDIT,150.0,Completed,PayPal,missing_timestamp
+err_0410,usr_deda8e76-a02c-4423-8e28-960f4f646823,15/10/2026 25:99:00,REWARD_CREDIT,150.0,Completed,PayPal,malformed_date
+err_0411,usr_63389db2-c0ae-4662-ab4a-fc669a621b7a,2026-10-15 12:30:00,REWARD_CREDIT,150.0,UNKNOWN_GLITCH,PayPal,invalid_status
+err_0412,usr_9165dcc4-fcdb-4b36-832e-d3908823e8c7,2026-10-15 12:30:00,REWARD_CREDIT,150.0,cOmPLeTeD,PayPal,inconsistent_capitalization
+err_0413,usr_3dd23f1a-4346-4088-b755-8efdec403e5c,2026-10-15 12:30:00,  REWARD_CREDIT ,150.0,Completed   ,PayPal,trailing_spaces
+err_0414,usr_28add8f7-417a-4b21-b4ea-223b33afb23a,2026-10-15 12:30:00,REWARD_CREDIT,ONE_HUNDRED,Completed,PayPal,invalid_numeric_value
+err_0415,usr_2405ea0b-ae22-4cad-acfb-65a398ff804a,2026-10-15 12:30:00,REWARD_CREDIT,-500.0,Completed,PayPal,negative_value_inappropriate
+err_0416,,2026-10-15 12:30:00,REWARD_CREDIT,150.0,Completed,PayPal,unexpected_null
+err_0417,usr_NON_EXISTENT_GHOST_9999,2026-10-15 12:30:00,REWARD_CREDIT,150.0,Completed,PayPal,orphan_record
+err_DUPE_EVENT_777,usr_12f04040-da2b-4b4f-bbce-30886a3e3a06,2026-10-15 12:30:00,REWARD_CREDIT,150.0,Completed,PayPal,duplicate_event
+err_0419,usr_527faf33-276f-4d3a-b586-8e510cdca2c3,2026-10-15 12:30:00,reward-payout-bonus,150.0,Completed,PayPal,inconsistent_naming
+err_0420,usr_21a42ced-79ce-4f19-909d-32f31e0ecabf,2026-10-15 12:30:00,REWARD_CREDIT,150.0,Requested_Then_Instantly_Refunded_Without_Processing,PayPal,impossible_state_transition
+err_DUPLICATE_001,usr_d09a31f3-fbb7-4a29-a856-2b2acef79403,2026-10-15 12:30:00,REWARD_CREDIT,150.0,Completed,PayPal,duplicate_id
+,usr_02abc96a-ead4-44af-ae54-37a7f1e0e289,2026-10-15 12:30:00,REWARD_CREDIT,150.0,Completed,PayPal,missing_id
+err_0423,usr_887f425d-980e-492c-8dcb-e4b2fd42ef28,,REWARD_CREDIT,150.0,Completed,PayPal,missing_timestamp
+err_0424,usr_c37fd099-a40b-4377-a2ec-ec9ab80f1f80,15/10/2026 25:99:00,REWARD_CREDIT,150.0,Completed,PayPal,malformed_date
+err_0425,usr_20f92677-2cc9-41f4-8368-12809273c65b,2026-10-15 12:30:00,REWARD_CREDIT,150.0,UNKNOWN_GLITCH,PayPal,invalid_status
+err_0426,usr_82995a3b-71e5-479a-b02a-d46a2b1f2f71,2026-10-15 12:30:00,REWARD_CREDIT,150.0,cOmPLeTeD,PayPal,inconsistent_capitalization
+err_0427,usr_0fc02b17-eb3b-4a3f-a46b-79729589bdc6,2026-10-15 12:30:00,  REWARD_CREDIT ,150.0,Completed   ,PayPal,trailing_spaces
+err_0428,usr_51e23741-fe61-486e-8ba8-e2313da1b539,2026-10-15 12:30:00,REWARD_CREDIT,ONE_HUNDRED,Completed,PayPal,invalid_numeric_value
+err_0429,usr_31d3c855-e209-4138-a2a5-a40184af759e,2026-10-15 12:30:00,REWARD_CREDIT,-500.0,Completed,PayPal,negative_value_inappropriate
+err_0430,,2026-10-15 12:30:00,REWARD_CREDIT,150.0,Completed,PayPal,unexpected_null
+err_0431,usr_NON_EXISTENT_GHOST_9999,2026-10-15 12:30:00,REWARD_CREDIT,150.0,Completed,PayPal,orphan_record
+err_DUPE_EVENT_777,usr_1036af87-04c9-4e52-9369-529b9c3011f3,2026-10-15 12:30:00,REWARD_CREDIT,150.0,Completed,PayPal,duplicate_event
+err_0433,usr_06c7db26-5ee7-40ad-993d-d66058c16561,2026-10-15 12:30:00,reward-payout-bonus,150.0,Completed,PayPal,inconsistent_naming
+err_0434,usr_3e1c6aae-8da5-42d1-abfd-82db7e392815,2026-10-15 12:30:00,REWARD_CREDIT,150.0,Requested_Then_Instantly_Refunded_Without_Processing,PayPal,impossible_state_transition
+err_DUPLICATE_001,usr_a208a1b5-e6ba-4763-9bf9-f45155fe5894,2026-10-15 12:30:00,REWARD_CREDIT,150.0,Completed,PayPal,duplicate_id
+,usr_e42c5de8-0bf4-4776-860b-f9f5bc618a19,2026-10-15 12:30:00,REWARD_CREDIT,150.0,Completed,PayPal,missing_id
+err_0437,usr_82adea41-36e4-426d-903e-9f434589e3b3,,REWARD_CREDIT,150.0,Completed,PayPal,missing_timestamp
+err_0438,usr_61787e52-50d9-4504-8c3d-6bbfdf0708b6,15/10/2026 25:99:00,REWARD_CREDIT,150.0,Completed,PayPal,malformed_date
+err_0439,usr_60d399c9-bbc3-41db-92a4-f409ee3a809e,2026-10-15 12:30:00,REWARD_CREDIT,150.0,UNKNOWN_GLITCH,PayPal,invalid_status
+err_0440,usr_0da083f8-d7f2-4e71-a5e9-ed7df812f8d1,2026-10-15 12:30:00,REWARD_CREDIT,150.0,cOmPLeTeD,PayPal,inconsistent_capitalization
+err_0441,usr_98829a68-b6b0-4ee2-8e28-76b1fc5514ba,2026-10-15 12:30:00,  REWARD_CREDIT ,150.0,Completed   ,PayPal,trailing_spaces
+err_0442,usr_f967c6bc-da06-4386-a7f1-6631cd775f82,2026-10-15 12:30:00,REWARD_CREDIT,ONE_HUNDRED,Completed,PayPal,invalid_numeric_value
+err_0443,usr_31f39da8-8f1c-4b19-a124-f53d643c6826,2026-10-15 12:30:00,REWARD_CREDIT,-500.0,Completed,PayPal,negative_value_inappropriate
+err_0444,,2026-10-15 12:30:00,REWARD_CREDIT,150.0,Completed,PayPal,unexpected_null
+err_0445,usr_NON_EXISTENT_GHOST_9999,2026-10-15 12:30:00,REWARD_CREDIT,150.0,Completed,PayPal,orphan_record
+err_DUPE_EVENT_777,usr_11ade685-6e40-4e70-8fa9-18847cfbded4,2026-10-15 12:30:00,REWARD_CREDIT,150.0,Completed,PayPal,duplicate_event
+err_0447,usr_43d85d2a-be88-4581-b2c1-b03f347a3ddc,2026-10-15 12:30:00,reward-payout-bonus,150.0,Completed,PayPal,inconsistent_naming
+err_0448,usr_3ae8a0b5-d20e-48bd-a010-532e61664881,2026-10-15 12:30:00,REWARD_CREDIT,150.0,Requested_Then_Instantly_Refunded_Without_Processing,PayPal,impossible_state_transition
+err_DUPLICATE_001,usr_02f26576-ae9f-45b0-ac0f-94185e3ab5b3,2026-10-15 12:30:00,REWARD_CREDIT,150.0,Completed,PayPal,duplicate_id
+,usr_3b386e55-c177-4bc4-881f-fa4e748d4db3,2026-10-15 12:30:00,REWARD_CREDIT,150.0,Completed,PayPal,missing_id
+err_0451,usr_d721db97-72fa-4c7f-ac9f-4c31159217d5,,REWARD_CREDIT,150.0,Completed,PayPal,missing_timestamp
+err_0452,usr_2c60f069-09ff-4375-b5f3-75e9180894bd,15/10/2026 25:99:00,REWARD_CREDIT,150.0,Completed,PayPal,malformed_date
+err_0453,usr_dfb1b35f-e770-475a-982f-0a00a8bbdfdb,2026-10-15 12:30:00,REWARD_CREDIT,150.0,UNKNOWN_GLITCH,PayPal,invalid_status
+err_0454,usr_6e3db3b9-43dd-41f2-9ba8-b9bb80d12e05,2026-10-15 12:30:00,REWARD_CREDIT,150.0,cOmPLeTeD,PayPal,inconsistent_capitalization
+err_0455,usr_f7b6fc9a-f294-437b-aee2-3fa8ec0fa4b9,2026-10-15 12:30:00,  REWARD_CREDIT ,150.0,Completed   ,PayPal,trailing_spaces
+err_0456,usr_d62b8042-d7b2-4245-8768-85ebb28ad99e,2026-10-15 12:30:00,REWARD_CREDIT,ONE_HUNDRED,Completed,PayPal,invalid_numeric_value
+err_0457,usr_a3b348f2-1d7b-4295-b378-243d08cee97d,2026-10-15 12:30:00,REWARD_CREDIT,-500.0,Completed,PayPal,negative_value_inappropriate
+err_0458,,2026-10-15 12:30:00,REWARD_CREDIT,150.0,Completed,PayPal,unexpected_null
+err_0459,usr_NON_EXISTENT_GHOST_9999,2026-10-15 12:30:00,REWARD_CREDIT,150.0,Completed,PayPal,orphan_record
+err_DUPE_EVENT_777,usr_677f58f7-336e-4b22-8a8e-d53b1809da47,2026-10-15 12:30:00,REWARD_CREDIT,150.0,Completed,PayPal,duplicate_event
+err_0461,usr_9d9efa2c-2e91-4b5d-b96e-75f50925930e,2026-10-15 12:30:00,reward-payout-bonus,150.0,Completed,PayPal,inconsistent_naming
+err_0462,usr_7f5a90dc-4fbf-46fa-82cf-7dac0eff689e,2026-10-15 12:30:00,REWARD_CREDIT,150.0,Requested_Then_Instantly_Refunded_Without_Processing,PayPal,impossible_state_transition
+err_DUPLICATE_001,usr_446a75c9-972b-48c8-b19c-c3d9b92200d9,2026-10-15 12:30:00,REWARD_CREDIT,150.0,Completed,PayPal,duplicate_id
+,usr_0970e0da-37d6-438f-aeca-3166e0b6a7ba,2026-10-15 12:30:00,REWARD_CREDIT,150.0,Completed,PayPal,missing_id
+err_0465,usr_fb3ad128-1c12-43ef-90e7-4ddf9c1f09c8,,REWARD_CREDIT,150.0,Completed,PayPal,missing_timestamp
+err_0466,usr_70810fad-acde-4d61-a229-cd6201b455ce,15/10/2026 25:99:00,REWARD_CREDIT,150.0,Completed,PayPal,malformed_date
+err_0467,usr_10fe8d41-15f4-4233-b490-7929d2ea73da,2026-10-15 12:30:00,REWARD_CREDIT,150.0,UNKNOWN_GLITCH,PayPal,invalid_status
+err_0468,usr_fb436be4-d3b2-4cdc-a1a0-36ff2828fbfb,2026-10-15 12:30:00,REWARD_CREDIT,150.0,cOmPLeTeD,PayPal,inconsistent_capitalization
+err_0469,usr_77dd9262-9f60-4fd5-a378-8b2d4d7b7d4d,2026-10-15 12:30:00,  REWARD_CREDIT ,150.0,Completed   ,PayPal,trailing_spaces
+err_0470,usr_f0d0b55c-fb6d-4357-9c65-ef185e517881,2026-10-15 12:30:00,REWARD_CREDIT,ONE_HUNDRED,Completed,PayPal,invalid_numeric_value
+err_0471,usr_297f07be-4ac5-4821-85bd-37db674a1e86,2026-10-15 12:30:00,REWARD_CREDIT,-500.0,Completed,PayPal,negative_value_inappropriate
+err_0472,,2026-10-15 12:30:00,REWARD_CREDIT,150.0,Completed,PayPal,unexpected_null
+err_0473,usr_NON_EXISTENT_GHOST_9999,2026-10-15 12:30:00,REWARD_CREDIT,150.0,Completed,PayPal,orphan_record
+err_DUPE_EVENT_777,usr_bc543d17-d568-4904-a07c-dd525c6e18ea,2026-10-15 12:30:00,REWARD_CREDIT,150.0,Completed,PayPal,duplicate_event
+err_0475,usr_c8ed8ba6-2d81-4d31-8925-22902c785d5c,2026-10-15 12:30:00,reward-payout-bonus,150.0,Completed,PayPal,inconsistent_naming
+err_0476,usr_c1fd34ef-b25c-4d45-8cce-49ce6b679084,2026-10-15 12:30:00,REWARD_CREDIT,150.0,Requested_Then_Instantly_Refunded_Without_Processing,PayPal,impossible_state_transition
+err_DUPLICATE_001,usr_3e91c43c-570c-48fb-8c6a-97a467ea6db9,2026-10-15 12:30:00,REWARD_CREDIT,150.0,Completed,PayPal,duplicate_id
+,usr_f7b00c03-d4af-4c6b-860b-a3d2c7f17252,2026-10-15 12:30:00,REWARD_CREDIT,150.0,Completed,PayPal,missing_id
+err_0479,usr_d797cc74-a96e-4a89-b685-07bc0cb222d1,,REWARD_CREDIT,150.0,Completed,PayPal,missing_timestamp
+err_0480,usr_cf616cd8-77a3-4772-8ad2-461def91e0b1,15/10/2026 25:99:00,REWARD_CREDIT,150.0,Completed,PayPal,malformed_date
+err_0481,usr_c4b8e3f0-9f88-4906-aa26-a987bbfb7d45,2026-10-15 12:30:00,REWARD_CREDIT,150.0,UNKNOWN_GLITCH,PayPal,invalid_status
+err_0482,usr_2f5aa33a-38fa-4c0b-9cd3-be3cef315e88,2026-10-15 12:30:00,REWARD_CREDIT,150.0,cOmPLeTeD,PayPal,inconsistent_capitalization
+err_0483,usr_641b82f1-63c9-4575-9cc7-bf8335985aff,2026-10-15 12:30:00,  REWARD_CREDIT ,150.0,Completed   ,PayPal,trailing_spaces
+err_0484,usr_e3250a33-abbc-4366-929f-ea962c23cebd,2026-10-15 12:30:00,REWARD_CREDIT,ONE_HUNDRED,Completed,PayPal,invalid_numeric_value
+err_0485,usr_b9b0b312-5c2d-4ab9-b439-ccbc99602cbf,2026-10-15 12:30:00,REWARD_CREDIT,-500.0,Completed,PayPal,negative_value_inappropriate
+err_0486,,2026-10-15 12:30:00,REWARD_CREDIT,150.0,Completed,PayPal,unexpected_null
+err_0487,usr_NON_EXISTENT_GHOST_9999,2026-10-15 12:30:00,REWARD_CREDIT,150.0,Completed,PayPal,orphan_record
+err_DUPE_EVENT_777,usr_d1a1e464-7e43-4370-9bcf-a3ee089a77cc,2026-10-15 12:30:00,REWARD_CREDIT,150.0,Completed,PayPal,duplicate_event
+err_0489,usr_5d488caf-9d65-4528-b0de-d6668eb6af81,2026-10-15 12:30:00,reward-payout-bonus,150.0,Completed,PayPal,inconsistent_naming
+err_0490,usr_e2b61fdb-0f9b-4381-98c9-90ba50898a47,2026-10-15 12:30:00,REWARD_CREDIT,150.0,Requested_Then_Instantly_Refunded_Without_Processing,PayPal,impossible_state_transition
+err_DUPLICATE_001,usr_ae8d7d6e-aeb7-4b69-a10b-3e3ee9c456c1,2026-10-15 12:30:00,REWARD_CREDIT,150.0,Completed,PayPal,duplicate_id
+,usr_76037797-c2c0-4b70-abbe-6bae2cd2d893,2026-10-15 12:30:00,REWARD_CREDIT,150.0,Completed,PayPal,missing_id
+err_0493,usr_1c46fe3e-3056-44f6-994a-4b7454bd55df,,REWARD_CREDIT,150.0,Completed,PayPal,missing_timestamp
+err_0494,usr_194ea6df-3dbd-4ab0-9efa-a4a153e5cd8c,15/10/2026 25:99:00,REWARD_CREDIT,150.0,Completed,PayPal,malformed_date
+err_0495,usr_c4d141c4-bdff-4543-b66f-526e6820b3a9,2026-10-15 12:30:00,REWARD_CREDIT,150.0,UNKNOWN_GLITCH,PayPal,invalid_status
+err_0496,usr_0ba61276-f11a-4588-95eb-f15ee143e8d2,2026-10-15 12:30:00,REWARD_CREDIT,150.0,cOmPLeTeD,PayPal,inconsistent_capitalization
+err_0497,usr_72a98e51-1ae4-4b1d-b42f-c485068b1e7a,2026-10-15 12:30:00,  REWARD_CREDIT ,150.0,Completed   ,PayPal,trailing_spaces
+err_0498,usr_8b8ecc96-f679-49dd-a515-d0e893093790,2026-10-15 12:30:00,REWARD_CREDIT,ONE_HUNDRED,Completed,PayPal,invalid_numeric_value
+err_0499,usr_1a9991da-155f-472b-aa57-17992045d756,2026-10-15 12:30:00,REWARD_CREDIT,-500.0,Completed,PayPal,negative_value_inappropriate
+err_0500,,2026-10-15 12:30:00,REWARD_CREDIT,150.0,Completed,PayPal,unexpected_null
+err_0501,usr_NON_EXISTENT_GHOST_9999,2026-10-15 12:30:00,REWARD_CREDIT,150.0,Completed,PayPal,orphan_record
+err_DUPE_EVENT_777,usr_c9e59755-2688-4722-8a1e-f3edd6af1342,2026-10-15 12:30:00,REWARD_CREDIT,150.0,Completed,PayPal,duplicate_event
+err_0503,usr_afc21bac-aa43-4ddb-a678-eff6d9e43e46,2026-10-15 12:30:00,reward-payout-bonus,150.0,Completed,PayPal,inconsistent_naming
+err_0504,usr_0a727ead-4172-4cd6-9ccc-d02f580a6068,2026-10-15 12:30:00,REWARD_CREDIT,150.0,Requested_Then_Instantly_Refunded_Without_Processing,PayPal,impossible_state_transition
+err_DUPLICATE_001,usr_035d70d4-5836-4d43-a2f1-4783444016a5,2026-10-15 12:30:00,REWARD_CREDIT,150.0,Completed,PayPal,duplicate_id
+,usr_6c4bc0f8-8ee0-4418-a20f-afbd6aae8285,2026-10-15 12:30:00,REWARD_CREDIT,150.0,Completed,PayPal,missing_id
+err_0507,usr_abeffd22-127e-4d0e-8bff-e5183a59fdf2,,REWARD_CREDIT,150.0,Completed,PayPal,missing_timestamp
+err_0508,usr_b1cd1e78-d370-4cae-9bf9-b8170508a1a1,15/10/2026 25:99:00,REWARD_CREDIT,150.0,Completed,PayPal,malformed_date
+err_0509,usr_c14c68b9-8ba4-4c56-a588-2a9574554e56,2026-10-15 12:30:00,REWARD_CREDIT,150.0,UNKNOWN_GLITCH,PayPal,invalid_status
+err_0510,usr_67e8fe27-97df-4738-965c-514d7291603e,2026-10-15 12:30:00,REWARD_CREDIT,150.0,cOmPLeTeD,PayPal,inconsistent_capitalization
+err_0511,usr_5955591a-f7a0-42d0-8e77-257f20f0beeb,2026-10-15 12:30:00,  REWARD_CREDIT ,150.0,Completed   ,PayPal,trailing_spaces
+err_0512,usr_33a933d7-1e02-4f1e-a155-8160b203591b,2026-10-15 12:30:00,REWARD_CREDIT,ONE_HUNDRED,Completed,PayPal,invalid_numeric_value
+err_0513,usr_440d6db5-d97a-47bb-bb62-480a18acecfc,2026-10-15 12:30:00,REWARD_CREDIT,-500.0,Completed,PayPal,negative_value_inappropriate
+err_0514,,2026-10-15 12:30:00,REWARD_CREDIT,150.0,Completed,PayPal,unexpected_null
+err_0515,usr_NON_EXISTENT_GHOST_9999,2026-10-15 12:30:00,REWARD_CREDIT,150.0,Completed,PayPal,orphan_record
+err_DUPE_EVENT_777,usr_4badf4bd-5bbe-4a36-bd19-ff2ce75a87b8,2026-10-15 12:30:00,REWARD_CREDIT,150.0,Completed,PayPal,duplicate_event
+err_0517,usr_ab18e802-0cd3-4b0b-8981-ce3983147193,2026-10-15 12:30:00,reward-payout-bonus,150.0,Completed,PayPal,inconsistent_naming
+err_0518,usr_e11c4797-58b3-47e1-94dc-e4dc23227c33,2026-10-15 12:30:00,REWARD_CREDIT,150.0,Requested_Then_Instantly_Refunded_Without_Processing,PayPal,impossible_state_transition
+err_DUPLICATE_001,usr_287008de-93ac-4ff7-8d38-7c49bae59203,2026-10-15 12:30:00,REWARD_CREDIT,150.0,Completed,PayPal,duplicate_id
+,usr_6de80be4-0f9a-4a24-8d3f-b566114907bc,2026-10-15 12:30:00,REWARD_CREDIT,150.0,Completed,PayPal,missing_id
+err_0521,usr_5ee38bee-a38a-4888-98ce-bd0995b1b7bc,,REWARD_CREDIT,150.0,Completed,PayPal,missing_timestamp
+err_0522,usr_42e909a0-7944-4ac1-b72a-c03fd2202ff1,15/10/2026 25:99:00,REWARD_CREDIT,150.0,Completed,PayPal,malformed_date
+err_0523,usr_05dd4b11-e8c0-4368-ba55-aa0eb1fac4e8,2026-10-15 12:30:00,REWARD_CREDIT,150.0,UNKNOWN_GLITCH,PayPal,invalid_status
+err_0524,usr_13c27b3d-05c9-4605-8926-4c8a5255457c,2026-10-15 12:30:00,REWARD_CREDIT,150.0,cOmPLeTeD,PayPal,inconsistent_capitalization
+err_0525,usr_d39117f4-2fa6-4f99-bb4b-67bc64dc9194,2026-10-15 12:30:00,  REWARD_CREDIT ,150.0,Completed   ,PayPal,trailing_spaces
+err_0526,usr_7f66c7ae-5cc2-4e24-9e5b-ed4623888555,2026-10-15 12:30:00,REWARD_CREDIT,ONE_HUNDRED,Completed,PayPal,invalid_numeric_value
+err_0527,usr_21e77177-e465-4e8e-bfa9-a0d41c91b7e1,2026-10-15 12:30:00,REWARD_CREDIT,-500.0,Completed,PayPal,negative_value_inappropriate
+err_0528,,2026-10-15 12:30:00,REWARD_CREDIT,150.0,Completed,PayPal,unexpected_null
+err_0529,usr_NON_EXISTENT_GHOST_9999,2026-10-15 12:30:00,REWARD_CREDIT,150.0,Completed,PayPal,orphan_record
+err_DUPE_EVENT_777,usr_6795e3f4-df8f-451e-b676-1722d6996a89,2026-10-15 12:30:00,REWARD_CREDIT,150.0,Completed,PayPal,duplicate_event
+err_0531,usr_098f19ba-102b-4c7e-a7d9-8ff22a21fd62,2026-10-15 12:30:00,reward-payout-bonus,150.0,Completed,PayPal,inconsistent_naming
+err_0532,usr_4d9e0485-dd1f-42a9-b173-d7f18ddaa2c5,2026-10-15 12:30:00,REWARD_CREDIT,150.0,Requested_Then_Instantly_Refunded_Without_Processing,PayPal,impossible_state_transition
+err_DUPLICATE_001,usr_1cfef92a-5ed9-4702-a8d2-7d0db3604757,2026-10-15 12:30:00,REWARD_CREDIT,150.0,Completed,PayPal,duplicate_id
+,usr_8a636482-fc0d-4b71-b6eb-05a4831af4cd,2026-10-15 12:30:00,REWARD_CREDIT,150.0,Completed,PayPal,missing_id
+err_0535,usr_9d19fed7-c276-461c-80d8-c8f8c6ade778,,REWARD_CREDIT,150.0,Completed,PayPal,missing_timestamp
+err_0536,usr_6132ea76-3886-4f36-ba02-6f1441e3c100,15/10/2026 25:99:00,REWARD_CREDIT,150.0,Completed,PayPal,malformed_date
+err_0537,usr_066c3d77-0be2-442b-9e0c-c662b41b2589,2026-10-15 12:30:00,REWARD_CREDIT,150.0,UNKNOWN_GLITCH,PayPal,invalid_status
+err_0538,usr_90e6c045-442d-4073-a043-7baeb705d903,2026-10-15 12:30:00,REWARD_CREDIT,150.0,cOmPLeTeD,PayPal,inconsistent_capitalization
+err_0539,usr_82e9f718-32c6-4b12-bc2b-58690f1581e3,2026-10-15 12:30:00,  REWARD_CREDIT ,150.0,Completed   ,PayPal,trailing_spaces
+err_0540,usr_ce485440-4271-48e8-8076-ce564399e703,2026-10-15 12:30:00,REWARD_CREDIT,ONE_HUNDRED,Completed,PayPal,invalid_numeric_value
+err_0541,usr_8d533330-417b-46a8-9e9d-786f317649fd,2026-10-15 12:30:00,REWARD_CREDIT,-500.0,Completed,PayPal,negative_value_inappropriate
+err_0542,,2026-10-15 12:30:00,REWARD_CREDIT,150.0,Completed,PayPal,unexpected_null
+err_0543,usr_NON_EXISTENT_GHOST_9999,2026-10-15 12:30:00,REWARD_CREDIT,150.0,Completed,PayPal,orphan_record
+err_DUPE_EVENT_777,usr_6f5d59db-9b17-4c06-b84a-ac1baf881c3a,2026-10-15 12:30:00,REWARD_CREDIT,150.0,Completed,PayPal,duplicate_event
+err_0545,usr_98f57607-ab9e-472f-b050-a1c2bfa519bf,2026-10-15 12:30:00,reward-payout-bonus,150.0,Completed,PayPal,inconsistent_naming
+err_0546,usr_364e60e8-faef-422c-91f0-3d01f8a79af4,2026-10-15 12:30:00,REWARD_CREDIT,150.0,Requested_Then_Instantly_Refunded_Without_Processing,PayPal,impossible_state_transition
+err_DUPLICATE_001,usr_fdfb5bdd-8174-433b-ac07-57f8a1324ff3,2026-10-15 12:30:00,REWARD_CREDIT,150.0,Completed,PayPal,duplicate_id
+,usr_3fa97b1c-e7ae-43ff-82f0-e3c3723ac504,2026-10-15 12:30:00,REWARD_CREDIT,150.0,Completed,PayPal,missing_id
+err_0549,usr_6cfd289a-0da7-4314-bfda-4ad3124f35ab,,REWARD_CREDIT,150.0,Completed,PayPal,missing_timestamp
+err_0550,usr_071181af-ce9a-4b56-9133-3e247aede33f,15/10/2026 25:99:00,REWARD_CREDIT,150.0,Completed,PayPal,malformed_date

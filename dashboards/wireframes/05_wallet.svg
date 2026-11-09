@@ -1,0 +1,172 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 700" width="100%" height="100%">
+    <style>
+        .bg { fill: #F8FAFC; }
+        .header-bg { fill: #1B365D; }
+        .title { font-family: 'Segoe UI', Arial, sans-serif; font-size: 20px; font-weight: bold; fill: #FFFFFF; }
+        .subtitle { font-family: 'Segoe UI', Arial, sans-serif; font-size: 11px; fill: #94A3B8; }
+        .card { fill: #FFFFFF; stroke: #CBD5E1; stroke-width: 1.5; rx: 6; }
+        .kpi-title { font-family: 'Segoe UI', Arial, sans-serif; font-size: 11px; font-weight: 600; fill: #64748B; }
+        .kpi-val { font-family: 'Segoe UI', Arial, sans-serif; font-size: 20px; font-weight: bold; fill: #0F172A; }
+        .kpi-sub { font-family: 'Segoe UI', Arial, sans-serif; font-size: 10px; fill: #10B981; }
+        .chart-header { font-family: 'Segoe UI', Arial, sans-serif; font-size: 13px; font-weight: bold; fill: #1E293B; }
+        .chart-sub { font-family: 'Segoe UI', Arial, sans-serif; font-size: 10px; fill: #64748B; }
+        .bar-color { fill: #3B82F6; }
+        .line-color { stroke: #2563EB; stroke-width: 2.5; fill: none; }
+        .axis { stroke: #E2E8F0; stroke-width: 1; }
+        .legend { font-family: 'Segoe UI', Arial, sans-serif; font-size: 10px; fill: #475569; }
+    </style>
+
+    <!-- Canvas Background -->
+    <rect width="1200" height="700" class="bg"/>
+
+    <!-- Top Navigation Bar -->
+    <rect width="1200" height="60" class="header-bg"/>
+    <text x="30" y="34" class="title">VELOOP REWARDS — DASHBOARD 5: WALLET</text>
+    <text x="30" y="50" class="subtitle">Blueprint Specification &amp; Wireframe Mockup | Author: Pushti Kotak | Date: 2026-11-02</text>
+    <rect x="1000" y="16" width="170" height="28" rx="4" fill="#0F172A"/>
+    <text x="1085" y="34" text-anchor="middle" font-family="'Segoe UI', sans-serif" font-size="11px" font-weight="bold" fill="#38BDF8">SIMULATED BLUEPRINT</text>
+
+    <!-- KPI Row (4 Cards) -->
+    <g transform="translate(30, 80)">
+
+        <g transform="translate(0, 0)">
+            <rect width="265" height="75" class="card"/>
+            <text x="16" y="24" class="kpi-title">TOTAL LEDGER MUTATIONS</text>
+            <text x="16" y="52" class="kpi-val">3,500</text>
+            <text x="250" y="52" text-anchor="end" class="kpi-sub">Double-Entry</text>
+        </g>
+
+        <g transform="translate(291, 0)">
+            <rect width="265" height="75" class="card"/>
+            <text x="16" y="24" class="kpi-title">CIRCULATING SUPPLY</text>
+            <text x="16" y="52" class="kpi-val">1,240,000 VE</text>
+            <text x="250" y="52" text-anchor="end" class="kpi-sub">Active Points</text>
+        </g>
+
+        <g transform="translate(582, 0)">
+            <rect width="265" height="75" class="card"/>
+            <text x="16" y="24" class="kpi-title">PENDING / AVAILABLE RATIO</text>
+            <text x="16" y="52" class="kpi-val">0.28</text>
+            <text x="250" y="52" text-anchor="end" class="kpi-sub">Healthy Liquidity</text>
+        </g>
+
+        <g transform="translate(873, 0)">
+            <rect width="265" height="75" class="card"/>
+            <text x="16" y="24" class="kpi-title">LEDGER DISCREPANCY</text>
+            <text x="16" y="52" class="kpi-val">0.00</text>
+            <text x="250" y="52" text-anchor="end" class="kpi-sub">100% Balanced</text>
+        </g>
+    </g>
+
+    <!-- Main Chart Grid (2x2 Layout) -->
+    <g transform="translate(30, 180)">
+
+        <!-- Chart 1: Daily Inflow vs. Outflow -->
+        <g transform="translate(0, 0)">
+            <rect width="557" height="230" class="card"/>
+            <text x="20" y="28" class="chart-header">Daily Inflow vs. Outflow</text>
+            <text x="20" y="44" class="chart-sub">Waterfall Chart | Credits (+), Debits (-), Reversals, Net Delta</text>
+            <line x1="20" y1="56" x2="537" y2="56" stroke="#F1F5F9" stroke-width="1.5"/>
+
+            <!-- Chart Visual Mockup -->
+            <rect x="40" y="80" width="477" height="120" fill="#F8FAFC" rx="4"/>
+            <line x1="40" y1="180" x2="517" y2="180" class="axis"/>
+            <line x1="40" y1="130" x2="517" y2="130" class="axis" stroke-dasharray="3,3"/>
+            <line x1="40" y1="80" x2="517" y2="80" class="axis" stroke-dasharray="3,3"/>
+
+            <!-- Mock visual bars / lines -->
+            <rect x="70" y="120" width="35" height="60" class="bar-color" rx="2" fill-opacity="0.85"/>
+            <rect x="135" y="100" width="35" height="80" class="bar-color" rx="2" fill-opacity="0.85"/>
+            <rect x="200" y="90" width="35" height="90" class="bar-color" rx="2" fill-opacity="0.85"/>
+            <rect x="265" y="110" width="35" height="70" class="bar-color" rx="2" fill-opacity="0.85"/>
+            <rect x="330" y="85" width="35" height="95" class="bar-color" rx="2" fill-opacity="0.85"/>
+            <rect x="395" y="95" width="35" height="85" class="bar-color" rx="2" fill-opacity="0.85"/>
+
+            <!-- Line trend overlay -->
+            <path d="M 87 115 Q 152 90, 217 80 T 347 75 T 412 85" class="line-color"/>
+            <circle cx="217" cy="80" r="3.5" fill="#1D4ED8"/>
+            <circle cx="347" cy="75" r="3.5" fill="#1D4ED8"/>
+        </g>
+
+        <!-- Chart 2: Balance Segmentation Trend -->
+        <g transform="translate(583, 0)">
+            <rect width="557" height="230" class="card"/>
+            <text x="20" y="28" class="chart-header">Balance Segmentation Trend</text>
+            <text x="20" y="44" class="chart-sub">Stacked Area Chart | Pending Escrow vs. Available Withdrawable VE</text>
+            <line x1="20" y1="56" x2="537" y2="56" stroke="#F1F5F9" stroke-width="1.5"/>
+
+            <!-- Chart Visual Mockup -->
+            <rect x="40" y="80" width="477" height="120" fill="#F8FAFC" rx="4"/>
+            <line x1="40" y1="180" x2="517" y2="180" class="axis"/>
+            <line x1="40" y1="130" x2="517" y2="130" class="axis" stroke-dasharray="3,3"/>
+            <line x1="40" y1="80" x2="517" y2="80" class="axis" stroke-dasharray="3,3"/>
+
+            <!-- Mock visual bars / lines -->
+            <rect x="70" y="120" width="35" height="60" class="bar-color" rx="2" fill-opacity="0.85"/>
+            <rect x="135" y="100" width="35" height="80" class="bar-color" rx="2" fill-opacity="0.85"/>
+            <rect x="200" y="90" width="35" height="90" class="bar-color" rx="2" fill-opacity="0.85"/>
+            <rect x="265" y="110" width="35" height="70" class="bar-color" rx="2" fill-opacity="0.85"/>
+            <rect x="330" y="85" width="35" height="95" class="bar-color" rx="2" fill-opacity="0.85"/>
+            <rect x="395" y="95" width="35" height="85" class="bar-color" rx="2" fill-opacity="0.85"/>
+
+            <!-- Line trend overlay -->
+            <path d="M 87 115 Q 152 90, 217 80 T 347 75 T 412 85" class="line-color"/>
+            <circle cx="217" cy="80" r="3.5" fill="#1D4ED8"/>
+            <circle cx="347" cy="75" r="3.5" fill="#1D4ED8"/>
+        </g>
+
+        <!-- Chart 3: Virtual Currency Velocity -->
+        <g transform="translate(0, 255)">
+            <rect width="557" height="230" class="card"/>
+            <text x="20" y="28" class="chart-header">Virtual Currency Velocity</text>
+            <text x="20" y="44" class="chart-sub">Line Chart | Weekly Turnover of Circulating Virtual Tokens</text>
+            <line x1="20" y1="56" x2="537" y2="56" stroke="#F1F5F9" stroke-width="1.5"/>
+
+            <!-- Chart Visual Mockup -->
+            <rect x="40" y="80" width="477" height="120" fill="#F8FAFC" rx="4"/>
+            <line x1="40" y1="180" x2="517" y2="180" class="axis"/>
+            <line x1="40" y1="130" x2="517" y2="130" class="axis" stroke-dasharray="3,3"/>
+            <line x1="40" y1="80" x2="517" y2="80" class="axis" stroke-dasharray="3,3"/>
+
+            <!-- Mock visual bars / lines -->
+            <rect x="70" y="120" width="35" height="60" class="bar-color" rx="2" fill-opacity="0.85"/>
+            <rect x="135" y="100" width="35" height="80" class="bar-color" rx="2" fill-opacity="0.85"/>
+            <rect x="200" y="90" width="35" height="90" class="bar-color" rx="2" fill-opacity="0.85"/>
+            <rect x="265" y="110" width="35" height="70" class="bar-color" rx="2" fill-opacity="0.85"/>
+            <rect x="330" y="85" width="35" height="95" class="bar-color" rx="2" fill-opacity="0.85"/>
+            <rect x="395" y="95" width="35" height="85" class="bar-color" rx="2" fill-opacity="0.85"/>
+
+            <!-- Line trend overlay -->
+            <path d="M 87 115 Q 152 90, 217 80 T 347 75 T 412 85" class="line-color"/>
+            <circle cx="217" cy="80" r="3.5" fill="#1D4ED8"/>
+            <circle cx="347" cy="75" r="3.5" fill="#1D4ED8"/>
+        </g>
+
+        <!-- Chart 4: Ledger Transaction Type Mix -->
+        <g transform="translate(583, 255)">
+            <rect width="557" height="230" class="card"/>
+            <text x="20" y="28" class="chart-header">Ledger Transaction Type Mix</text>
+            <text x="20" y="44" class="chart-sub">Treemap Chart | Volume Share by Transaction Type Enum</text>
+            <line x1="20" y1="56" x2="537" y2="56" stroke="#F1F5F9" stroke-width="1.5"/>
+
+            <!-- Chart Visual Mockup -->
+            <rect x="40" y="80" width="477" height="120" fill="#F8FAFC" rx="4"/>
+            <line x1="40" y1="180" x2="517" y2="180" class="axis"/>
+            <line x1="40" y1="130" x2="517" y2="130" class="axis" stroke-dasharray="3,3"/>
+            <line x1="40" y1="80" x2="517" y2="80" class="axis" stroke-dasharray="3,3"/>
+
+            <!-- Mock visual bars / lines -->
+            <rect x="70" y="120" width="35" height="60" class="bar-color" rx="2" fill-opacity="0.85"/>
+            <rect x="135" y="100" width="35" height="80" class="bar-color" rx="2" fill-opacity="0.85"/>
+            <rect x="200" y="90" width="35" height="90" class="bar-color" rx="2" fill-opacity="0.85"/>
+            <rect x="265" y="110" width="35" height="70" class="bar-color" rx="2" fill-opacity="0.85"/>
+            <rect x="330" y="85" width="35" height="95" class="bar-color" rx="2" fill-opacity="0.85"/>
+            <rect x="395" y="95" width="35" height="85" class="bar-color" rx="2" fill-opacity="0.85"/>
+
+            <!-- Line trend overlay -->
+            <path d="M 87 115 Q 152 90, 217 80 T 347 75 T 412 85" class="line-color"/>
+            <circle cx="217" cy="80" r="3.5" fill="#1D4ED8"/>
+            <circle cx="347" cy="75" r="3.5" fill="#1D4ED8"/>
+        </g>
+    </g>
+</svg>

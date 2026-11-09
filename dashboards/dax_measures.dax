@@ -1,0 +1,168 @@
+// ============================================================================
+// VELOOP REWARDS — PRODUCTION POWER BI DAX MEASURES SPECIFICATION
+// Project: Product Analytics, Data Readiness & Data Management Blueprint
+// Author: Pushti Kotak | Deliverable: DELIV-15
+// Date: 2026-11-02
+// ============================================================================
+
+// 1. CORE USER LIFECYCLE MEASURES
+DAU := 
+CALCULATE(
+    DISTINCTCOUNT(fct_feature_events[user_id]),
+    fct_feature_events[event_name] IN {
+        "task_offer_started", "task_offer_completed", 
+        "engagement_daily_claimed", "engagement_spin_completed", 
+        "withdrawal_requested"
+    }
+)
+
+MAU := 
+CALCULATE(
+    DISTINCTCOUNT(fct_feature_events[user_id]),
+    DATESINPERIOD(dim_dates[date_id], LASTDATE(dim_dates[date_id]), -30, DAY),
+    fct_feature_events[event_name] IN {
+        "task_offer_started", "task_offer_completed", 
+        "engagement_daily_claimed", "engagement_spin_completed", 
+        "withdrawal_requested"
+    }
+)
+
+Platform_Stickiness_Pct := 
+DIVIDE([DAU], [MAU], 0)
+
+New_User_Registrations := 
+DISTINCTCOUNT(dim_users[user_id])
+
+Onboarding_Completion_Rate_Pct := 
+DIVIDE(
+    CALCULATE(COUNTROWS(dim_users), dim_users[onboarding_completed_flag] = TRUE()),
+    COUNTROWS(dim_users),
+    0
+)
+
+// 2. TASK & EARNING MEASURES
+Task_Starts_Count := 
+COUNTROWS(fct_task_activity)
+
+Task_Completions_Count := 
+CALCULATE(
+    COUNTROWS(fct_task_activity),
+    fct_task_activity[activity_status] = "Completed"
+)
+
+Task_Completion_Rate_Pct := 
+DIVIDE([Task_Completions_Count], [Task_Starts_Count], 0)
+
+Gross_Advertiser_Revenue_USD := 
+SUM(fct_task_activity[partner_payout_usd])
+
+Average_Reward_Per_Completed_Task_VE := 
+DIVIDE(
+    CALCULATE(SUM(fct_rewards[amount]), fct_rewards[source_type] = "Offerwall_Task"),
+    [Task_Completions_Count],
+    0
+)
+
+// 3. REWARD & LIABILITY MEASURES
+Total_Credited_Rewards_VE := 
+CALCULATE(
+    SUM(fct_rewards[amount]),
+    fct_rewards[status] = "Credited"
+)
+
+Total_Reversed_Rewards_VE := 
+CALCULATE(
+    SUM(fct_rewards[amount]),
+    fct_rewards[status] = "Reversed"
+)
+
+Reward_Reversal_Rate_Pct := 
+DIVIDE([Total_Reversed_Rewards_VE], [Total_Credited_Rewards_VE], 0)
+
+Net_Accrued_Reward_Liability_USD := 
+SUM(dim_users[lifetime_ve_earned]) * 0.001 - SUM(dim_users[lifetime_usd_withdrawn])
+
+// 4. WALLET & TRANSACTION MEASURES
+Total_Wallet_Transactions_Count := 
+COUNTROWS(fct_wallet_transactions)
+
+Total_Credit_Volume_VE := 
+CALCULATE(
+    SUM(fct_wallet_transactions[amount]),
+    fct_wallet_transactions[direction] = "CREDIT"
+)
+
+Total_Debit_Volume_VE := 
+CALCULATE(
+    SUM(fct_wallet_transactions[amount]),
+    fct_wallet_transactions[direction] = "DEBIT"
+)
+
+Ledger_Audit_Check := 
+[Total_Credit_Volume_VE] - [Total_Debit_Volume_VE]
+
+// 5. WITHDRAWAL & PAYOUT MEASURES
+Withdrawal_Requests_Count := 
+COUNTROWS(fct_withdrawals)
+
+Completed_Withdrawals_Count := 
+CALCULATE(
+    COUNTROWS(fct_withdrawals),
+    fct_withdrawals[status] = "Completed"
+)
+
+Withdrawal_Completion_Rate_Pct := 
+DIVIDE([Completed_Withdrawals_Count], [Withdrawal_Requests_Count], 0)
+
+Withdrawal_Rejection_Rate_Pct := 
+DIVIDE(
+    CALCULATE(COUNTROWS(fct_withdrawals), fct_withdrawals[status] = "Rejected"),
+    [Withdrawal_Requests_Count],
+    0
+)
+
+Total_Fiat_Disbursed_USD := 
+CALCULATE(
+    SUM(fct_withdrawals[net_amount]),
+    fct_withdrawals[status] = "Completed",
+    fct_withdrawals[currency] = "USD"
+)
+
+Median_Withdrawal_Processing_Hours := 
+MEDIANX(
+    FILTER(fct_withdrawals, fct_withdrawals[status] = "Completed" && NOT(ISBLANK(fct_withdrawals[final_timestamp]))),
+    DATEDIFF(fct_withdrawals[requested_timestamp], fct_withdrawals[final_timestamp], MINUTE) / 60.0
+)
+
+Payout_SLA_Compliance_Rate_Pct := 
+DIVIDE(
+    CALCULATE(
+        COUNTROWS(fct_withdrawals),
+        fct_withdrawals[status] = "Completed",
+        DATEDIFF(fct_withdrawals[requested_timestamp], fct_withdrawals[final_timestamp], HOUR) <= 24
+    ),
+    [Completed_Withdrawals_Count],
+    0
+)
+
+// 6. REFERRAL MEASURES
+Total_Referral_Links_Created := 
+COUNTROWS(fct_referrals)
+
+Referral_Registered_Count := 
+CALCULATE(
+    COUNTROWS(fct_referrals),
+    fct_referrals[referral_status] IN {"Registered", "Activated", "Converted"}
+)
+
+Referral_Activated_Count := 
+CALCULATE(
+    COUNTROWS(fct_referrals),
+    fct_referrals[referral_status] IN {"Activated", "Converted"}
+)
+
+Referral_Activation_Rate_Pct := 
+DIVIDE([Referral_Activated_Count], [Referral_Registered_Count], 0)
+
+Viral_K_Factor := 
+DIVIDE([Referral_Activated_Count], DISTINCTCOUNT(dim_users[user_id]), 0)

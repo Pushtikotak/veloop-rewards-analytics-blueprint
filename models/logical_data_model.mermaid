@@ -1,0 +1,173 @@
+erDiagram
+    %% ==========================================
+    %% VELOOP REWARDS — LOGICAL DATA MODEL (ERD)
+    %% Author: Pushti Kotak | Deliverable: DELIV-10
+    %% ==========================================
+
+    dim_users ||--o{ fct_task_activity : "executes"
+    dim_users ||--o{ fct_rewards : "receives"
+    dim_users ||--o{ fct_wallet_transactions : "owns"
+    dim_users ||--o{ fct_withdrawals : "requests"
+    dim_users ||--o{ fct_referrals : "refers (as referrer)"
+    dim_users ||--o{ fct_referrals : "invited (as referred)"
+    dim_users ||--o{ fct_feature_events : "generates"
+    dim_users ||--o{ map_user_badges : "earns"
+    dim_users ||--o{ fct_support_tickets : "files"
+
+    dim_tasks ||--o{ fct_task_activity : "instantiated by"
+    fct_task_activity ||--o| fct_rewards : "generates credit"
+    fct_rewards ||--o| fct_wallet_transactions : "triggers ledger entry"
+    fct_withdrawals ||--o| fct_wallet_transactions : "triggers escrow/debit"
+    dim_badges_missions ||--o{ map_user_badges : "awarded in"
+
+    dim_users {
+        varchar(36) user_id PK "UUIDv4 canonical user key"
+        varchar(20) account_status "Registered|Onboarded|Active|Dormant|Churned|Suspended"
+        timestamptz registration_timestamp "UTC creation moment"
+        varchar(50) registration_source "Organic|Google_Ads|Meta_Ads|Referral"
+        varchar(20) referral_code_used "Referral vanity code or NULL"
+        varchar(20) auth_provider "Email_Password|Google_OAuth|Apple_ID"
+        char(2) country_code "ISO 3166-1 alpha-2"
+        varchar(20) signup_device_type "Android_Mobile|iOS_Mobile|Web"
+        varchar(64) signup_ip_hash "SHA-256 masked IP"
+        boolean email_verified_flag "Verification flag"
+        boolean onboarding_completed_flag "Tutorial completion flag"
+        integer current_level "Gamification level (>=1)"
+        integer total_xp "Cumulative XP"
+        integer current_streak_days "Active check-in streak"
+        decimal lifetime_ve_earned "Cumulative virtual earnings"
+        timestamptz last_active_timestamp "Recency timestamp"
+    }
+
+    dim_tasks {
+        varchar(32) task_id PK "Unique campaign ID"
+        varchar(100) task_name "Display title"
+        varchar(30) task_category "Survey|Game_Install|App_Trial|Microtask"
+        varchar(30) provider_id "CPX_Research|Torox|AdGate|BitLabs"
+        decimal reward_amount "Display reward (e.g. 150.00)"
+        varchar(10) reward_unit "VE|XP|GEMS|TOKENS"
+        integer estimated_completion_min "Estimated duration"
+        varchar(100) target_countries "Eligible ISO country codes"
+        varchar(50) target_devices "Eligible device form factors"
+        decimal gross_payout_usd "Advertiser price per lead"
+        boolean is_active_flag "Catalog active status"
+        timestamptz created_at "Catalog entry timestamp"
+    }
+
+    fct_task_activity {
+        varchar(36) task_activity_id PK "UUIDv4 execution session key"
+        varchar(36) user_id FK "References dim_users"
+        varchar(32) task_id FK "References dim_tasks"
+        varchar(64) click_id "Outbound tracking token"
+        timestamptz start_time "Redirect initiation time"
+        timestamptz completion_time "Partner webhook callback time"
+        varchar(20) activity_status "Started|Completed|Failed|Abandoned"
+        varchar(30) failure_category "USER_ABANDONED|DISQUALIFIED|TRACKING_DROPPED"
+        decimal reward_amount "Agreed reward amount"
+        varchar(10) reward_unit "Currency unit"
+        varchar(20) validation_status "Pending|Validated_Approved|Rejected"
+        varchar(64) external_tx_id "Partner provider transaction ID"
+        decimal partner_payout_usd "Gross revenue realized"
+    }
+
+    fct_rewards {
+        varchar(36) reward_id PK "UUIDv4 reward mutation key"
+        varchar(36) user_id FK "References dim_users"
+        varchar(36) task_activity_id FK "References fct_task_activity"
+        decimal amount "Numeric reward quantity"
+        varchar(10) unit "VE|XP|GEMS|TOKENS"
+        varchar(20) status "Pending|Credited|Reversed|Corrected"
+        timestamptz created_at "Creation timestamp"
+        timestamptz credited_at "Settlement timestamp"
+        varchar(30) source_type "Offerwall_Task|Daily_Streak|Spin_Wheel|Referral"
+        boolean is_reversed_flag "Chargeback flag"
+        varchar(50) reversal_reason "Clawback causal reason"
+    }
+
+    fct_wallet_transactions {
+        varchar(36) transaction_id PK "UUIDv4 atomic ledger key"
+        varchar(36) user_id FK "References dim_users"
+        timestamptz timestamp "Commit timestamp"
+        varchar(30) transaction_type "REWARD_CREDIT|WITHDRAWAL_ESCROW|REVERSAL"
+        varchar(6) direction "CREDIT|DEBIT"
+        decimal amount "Transacted amount"
+        varchar(10) unit "VE|XP|GEMS|USD|INR"
+        decimal balance_before "Snapshot prior to mutation"
+        decimal balance_after "Snapshot post mutation"
+        varchar(30) source "Originating service"
+        varchar(64) reference_id "Pointer to reward_id or withdrawal_id"
+        varchar(36) parent_tx_id "Pointer to original tx if reversal"
+    }
+
+    fct_withdrawals {
+        varchar(36) withdrawal_id PK "UUIDv4 cashout key"
+        varchar(36) user_id FK "References dim_users"
+        decimal requested_amount "Gross virtual points submitted"
+        decimal fee_amount "Gateway fee deducted"
+        decimal net_amount "Net fiat value disbursed"
+        char(3) currency "Target ISO currency (USD, INR)"
+        varchar(20) payout_method "PayPal|UPI_Direct|Crypto_USDT|Gift_Card"
+        varchar(64) destination_hash "SHA-256 masked account handle"
+        timestamptz requested_timestamp "Submission time"
+        timestamptz processing_timestamp "Gateway dispatch time"
+        timestamptz final_timestamp "Settlement confirmation time"
+        varchar(20) status "Requested|Processing|Completed|Rejected|Reversed"
+        varchar(50) reason_category "Failure/rejection classification"
+        varchar(64) gateway_tx_id "External processor reference"
+    }
+
+    fct_referrals {
+        varchar(36) referral_id PK "UUIDv4 referral relationship key"
+        varchar(36) referrer_user_id FK "References dim_users"
+        varchar(36) referred_user_id FK "References dim_users"
+        varchar(20) referral_code "Vanity code used"
+        varchar(30) share_channel "WhatsApp|Telegram|Direct_Link"
+        timestamptz creation_timestamp "Share link generation time"
+        timestamptz registration_timestamp "Invitee signup time"
+        timestamptz activation_timestamp "First task completion time"
+        timestamptz conversion_timestamp "Bonus release time"
+        varchar(20) referral_status "Link_Created|Registered|Activated|Converted"
+        decimal reward_amount "Referrer commission"
+        boolean ip_collision_flag "Sybil defense match flag"
+    }
+
+    fct_feature_events {
+        varchar(36) event_id PK "UUIDv4 unique event key"
+        varchar(36) user_id FK "References dim_users"
+        varchar(36) session_id "UUIDv4 continuous session key"
+        varchar(50) event_name "Standardized domain_object_action"
+        varchar(30) feature_domain "Auth|Tasks|Rewards|Wallet|Payouts"
+        timestamptz client_timestamp "Device local clock time"
+        timestamptz server_timestamp "Ingestion server UTC time"
+        varchar(20) device_type "Android_Mobile|iOS_Mobile|Web"
+        text event_properties_json "Semi-structured contextual JSON"
+    }
+
+    dim_badges_missions {
+        varchar(32) item_id PK "Alphanumeric challenge key"
+        varchar(15) item_type "Badge|Mission"
+        varchar(100) title "Display title"
+        text description "Qualification conditions"
+        integer reward_xp "XP granted upon completion"
+        integer reward_gems "Gems granted upon completion"
+        varchar(50) prerequisite_metric "Underlying metric evaluated"
+        integer threshold_value "Numeric threshold to unlock"
+    }
+
+    map_user_badges {
+        varchar(36) map_id PK "UUIDv4 award record"
+        varchar(36) user_id FK "References dim_users"
+        varchar(32) item_id FK "References dim_badges_missions"
+        timestamptz earned_at "Unlock timestamp"
+    }
+
+    fct_support_tickets {
+        varchar(36) ticket_id PK "UUIDv4 dispute key"
+        varchar(36) user_id FK "References dim_users"
+        varchar(32) task_id "Related campaign ID or NULL"
+        varchar(30) dispute_category "Missing_Credit|Payout_Delay|Account_Flag"
+        decimal claimed_amount "User claimed VE points"
+        varchar(20) status "Open|In_Review|Resolved|Rejected"
+        timestamptz created_at "Filing timestamp"
+        timestamptz resolved_at "Resolution timestamp"
+    }
